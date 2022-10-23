@@ -1,0 +1,357 @@
+body {
+    margin: 0;
+    padding: 0;
+    /* background: rebeccapurple; */
+    font-family: candara;
+}
+.p5{
+    padding: 5 !important;
+}
+.pt5{
+    padding-top: 5 !important;
+}
+.pb5{
+    padding-bottom: 5 !important;
+}
+.pl5{
+    padding-left: 5 !important;
+}
+.pr5{
+    padding-right: 5 !important;
+}
+.bg{background-color: #F7FAFD;}
+@font-face {
+    font-family: candara;
+    src: url(frontend/font/Candara.ttf);
+}
+@font-face {
+    font-family: mmrtext;
+    src: url(frontend/fonts/mmrtext.ttf);
+}
+@font-face {
+    font-family: leelawui;
+    src: url(frontend/fonts/LeelawUI.ttf);
+}
+@media (min-width: 992px)
+{
+    .navbar-expand-lg .navbar-collapse {
+        justify-content: end ;
+    }
+   
+}
+.navbar-toggler:focus {
+
+    box-shadow: none;
+}
+
+
+@media (max-width: 991px)
+{
+    .mline{
+        border-bottom: 1px solid #bcbec0;
+    }
+
+    .navbar-collapse {
+        background-color: #F7FAFD !important;
+        margin-top: 4px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    }
+    /* .nav-item{
+        border-bottom: 1px solid;
+    } */
+    .dropdown-menu {
+        background-color: #F7FAFD !important;
+        display: block;
+        border: none;
+        text-align: center  ;
+    }
+
+    .navbar-nav {
+    padding-right: 25px;
+    padding-left: 25px;
+    }
+    .dropdown-toggle::after{
+        display: none;
+    }
+    video {
+        max-height: 100%;
+        max-width: 100%;
+    }
+    .bg-video-wrap {
+        position: relative;
+        overflow: hidden;
+        max-height: 100%;
+        max-width: 100%;
+        /* background: url(https://designsupply-web.com/samplecontent/vender/codepen/20181014.png) no-repeat center center/cover; */
+    }
+    .overlay {
+        max-height: 100%;
+        max-width: 100%;
+        /* position: absolute; */
+
+        background-color: #0802ff4d !important;
+    }
+    
+    
+}
+/* medeya qurey end 991 */
+.dropdown-item.active, .dropdown-item:active {
+    background-color: #0802ff4d;
+    color: #000;
+}
+.nav-link{
+    padding-bottom: 0px;
+}
+.menuhr {
+    height: 0;
+    margin: var(--bs-dropdown-divider-margin-y) 0;
+    overflow: hidden;
+    border-top: 1px solid var(--bs-dropdown-divider-bg);
+    opacity: 1;
+}
+
+/* .navbar-expand-lg .navbar-collapse {
+    display: flex!important;
+    flex-basis: auto;
+    justify-content: end;
+} */
+
+/* video */
+
+
+.bg-video-wrap {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    /* background: url(https://designsupply-web.com/samplecontent/vender/codepen/20181014.png) no-repeat center center/cover; */
+}
+
+video {
+    min-width: 100%;
+    min-height: 100vh;
+    z-index: 1;
+}
+
+.overlay {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: 3px 3px;
+    z-index: 2;
+    background-color: rgb(8 2 255 / 30%) !important;
+}
+
+.slidcont  {
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 3;
+    /* max-width: 400px;
+    width: 100%; */
+    height: 50px;
+}
+/* video */
+/* card */
+
+div.card_conatiner h3:first-child{
+    text-align: center;
+    font-weight: 700;
+    font-family: Candara;
+}
+
+div.card_conatiner .card{
+    /* width: 16rem; */
+    /* margin: auto;
+    border: none; */
+    box-shadow: 0px 0px 9px -2px #7ba9d7;
+    /* transition: .5s all ease-in-out;
+    display: inline-block;
+    color: rgb(0, 0, 0); */
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+div.card_conatiner .card img{
+    width: 80px;
+    height: 80px;
+}
+
+div.card_conatiner .card .card-title{
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-family: Candara;
+}
+
+div.card_conatiner .card .card-text{
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-family: Candara;
+}
+.card_conatiner .slick-initialized .slick-slide {
+    margin-right: 10px;
+    margin-left: 10px;
+    /* width: 270px !important; */
+}
+.card-body {
+    padding: 5px;
+}
+
+
+/* card */
+/* Client Think */
+
+section.client_think {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.card_client {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 50%;
+}
+
+div.card_content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.client_info {
+    padding: 0px 70px;
+}
+
+.client_info p {
+    font-family: mmrtext;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.client_info span#client_name {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+div.client_video {
+    width: 75%;
+    height: 300px;
+}
+
+div.client_video img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+div.client_image {
+    height: 100px;
+    width: 100px;
+    margin-left: -50px;
+    z-index: 10;
+}
+
+div.client_image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+@media screen and (max-width: 768px) {
+
+    section.client_think {
+        flex-direction: column;
+    }
+
+    div.card_client {
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    div.card_content {
+        width: 100%;
+    }
+
+    div.client_video {
+        width: 70%;
+        height: 225px;
+    }
+
+    div.client_image {
+        height: 80px;
+        width: 80px;
+        margin-left: -40px;
+    }
+}
+
+/* Client Think */
+
+/* Client Think 2 */
+
+section.client_think2 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+div.single_client {
+    display: flex;
+    width: 310px;
+    flex-direction: column;
+    align-items: center;
+}
+
+div.client_info2 {
+    padding: 35px 15px 45px 15px;
+    font-size: 16px;
+    text-align: center;
+    font-family: mmrtext;
+    /* box-shadow: 0px 0px 10px 10px #8888881f; */
+    border-radius: 5px;
+    line-height: 20px;
+    margin:30px;
+}
+
+.client_image2 {
+    text-align: center;
+    margin-top: -50px;
+    width: 100px;
+    height: 100px;
+
+}
+
+.client_image2 img {
+    border-radius: 50%;
+    /* margin-bottom: 15px; */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+
+.client_image2 span#client_name {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* Client Think 2 */

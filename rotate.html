@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rotate</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+    <style>
+        body {
+            width: 99%;
+            height: 100%;
+            overflow: hidden;
+            background: #355C7D;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #C06C84, #6C5B7B, #355C7D);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #C06C84, #6C5B7B, #355C7D);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        }
+
+        .wrapper {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transition: .5s;
+            transform-origin: center;
+        }
+
+        .item {
+            transform-origin: center;
+            transition: .5s;
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 1px solid #FF80AB;
+            display: inline-block;
+            margin: 0;
+            font-size: 3em;
+            font-family: sans-serif;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .controls {
+            position: absolute;
+            top: 47%;
+            width: 99%;
+            text-align: center;
+        }
+
+        .left,
+        .right {
+            display: inline-block;
+            color: #fff;
+            font-size: 3em;
+            cursor: pointer;
+        }
+
+        .left {
+            margin-right: 30px;
+        }
+
+        .right {
+            margin-left: 30px;
+        }
+
+        /* skipable part */
+        .coffee {
+            width: 96%;
+            position: absolute;
+            bottom: 0px;
+            text-align: right;
+            color: #fff;
+            font-weight: 600;
+            font-family: sans-serif;
+        }
+
+        .ptr {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #355C7D;
+            background: #FF80AB;
+            position: absolute;
+            width: 220px;
+            height: 50px;
+            text-decoration: none;
+            border: 1px solid #d69aae;
+            font-family: sans-serif;
+            font-size: 1em;
+            font-weight: 700;
+            bottom: 50px;
+            right: 20px;
+            transition: .3s;
+        }
+
+        .ptr:hover {
+            transition: .3s;
+            transform: scale(1.1);
+        }
+
+        .selection-off {
+            -webkit-touch-callout: none;
+            /* iOS Safari */
+            -webkit-user-select: none;
+            /* Safari */
+            -khtml-user-select: none;
+            /* Konqueror HTML */
+            -moz-user-select: none;
+            /* Firefox */
+            -ms-user-select: none;
+            /* Internet Explorer/Edge */
+            user-select: none;
+            /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+        }
+
+        /* just a bit of responsive */
+
+        /* @media screen and (max-width: 768px) {
+            .item {
+                width: 60px;
+                height: 60px;
+                font-size: 1.5em;
+            }
+
+            .wrapper {
+                position: absolute;
+                top: calc(50% - 30px);
+                left: calc(50% - 30px);
+            }
+
+            .controls {
+                top: 20px;
+            }
+
+            .left {
+                margin-right: 50px;
+            }
+
+            .right {
+                margin-left: 50px;
+            }
+
+            a {
+                bottom: 20px;
+                height: 50px;
+                width: 200px;
+                font-weight: 600;
+                font-size: 1em;
+            }
+        } */
+    </style>
+
+
+    <div id="center" class="wrapper">
+        <div class="round">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+        </div>
+
+    </div>
+
+    <div class="controls selection-off">
+        <div class="left selection-off" onclick="turnLeft()"><i class="fas fa-caret-left"></i></div>
+        <div class="right selection-off" onclick="turnRight()"><i class="fas fa-caret-right"></i></div>
+    </div>
+
+
+    <script>
+
+        var htmlCollection = document.getElementsByClassName('item');
+        //getting elements by class name into an HTMLCollection
+
+        var itemsId = Array.from(htmlCollection);
+        //turning the HTMLcollection into an array for easier manipulation of the elements
+
+        var sectionDeg = 360 / itemsId.length;
+        //sectioning the (imaginary) circle into a number of section equalling the number of items
+        //it can be used on more elements
+
+        var radianSectionDeg = sectionDeg * Math.PI * 2 / 360;
+        //transforming from degrees into radians
+
+        var radiusLength = 200;
+        var radiusLengt = 500;
+        //the distance between the center of the circle to the element
+        //edit this number to increase/decrease that distance
+
+        for (var i = 0; i < itemsId.length; i++) {
+            itemsId[i].style.top = radiusLength * Math.sin(radianSectionDeg * i - 1.3000) - 50 + 'px';
+            itemsId[i].style.left = radiusLength * Math.cos(radianSectionDeg * i - 1.3000) - 50 + 'px';
+
+        }
+        // setting the top and left positions of each elemenent based on the following formula:
+        // (x, y) = (r * cos(θ), r * sin(θ)) like this:
+        // x = (r * cos(θ) => left
+        // y = r * sin(θ) => top
+        // 1.5708 is a radian used put the first element on top - basically 90deg
+
+        var rotation = 0;
+        var center = document.getElementById('center');
+        //we are going to rotate the wrapper of the elements
+
+        function turnLeft() {
+            rotation = rotation + radianSectionDeg;
+            center.style.transform = 'rotate(' + rotation + 'rad)';
+            for (var i = 0; i < itemsId.length; i++) {
+                itemsId[i].style.transform = 'rotate(' + -rotation + 'rad)';
+            }
+        }
+
+        function turnRight() {
+            rotation = rotation - radianSectionDeg;
+            center.style.transform = 'rotate(' + rotation + 'rad)';
+            for (var i = 0; i < itemsId.length; i++) {
+                itemsId[i].style.transform = 'rotate(' + -rotation + 'rad)';
+            }
+        }
+//both these functions rotate the wrapper
+//they rotate the inner elements too, to keep them straight
+    </script>
+</body>
+
+</html>

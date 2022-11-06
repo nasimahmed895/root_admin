@@ -1,0 +1,432 @@
+@media (min-width: 992px) {
+
+    #demo-timegrid {
+        height: 90%;
+    }
+
+    .mbsc-datepicker-tab.mbsc-datepicker-tab-calendar.mbsc-ios.mbsc-datepicker-tab-active {
+        margin-right: 0px;
+    }
+
+
+    .navbar-nav hr {
+        display: none;
+    }
+
+    .navbar-nav .dropdown-menu hr {
+        display: block;
+        margin: 0px;
+    }
+
+    .navbar-nav .dropdown-menu .d {
+        display: none;
+    }
+
+    /* .navbar-nav .dropdown-menu li {
+        border-left: 2px solid red;
+        border-radius: 0;
+        margin: 2px;
+    } */
+
+    .navbar-nav .dropdown-menu {
+        box-shadow: 0px 0px 22px -7px #0000007a;
+    }
+
+
+    .navbar-expand-lg .navbar-nav .dropdown-menu {
+        top: 2.2rem;
+    }
+
+    /* .navbar-nav .dropdown-menu hr {
+        display: none;
+    } */
+
+    /* .navbar-nav ul.dropdown-menu:before {
+        content: "^";
+        position: absolute;
+        top: -20px;
+        left: 20%;
+        font-size: 29px;
+        color: #3b3b54;
+        font-weight: bold;
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        transform: rotate(180deg);
+    } */
+
+    video {
+        width: 100%;
+        height: auto;
+        z-index: 1;
+    }
+
+
+    .navbar-expand-lg .navbar-collapse {
+        justify-content: end;
+    }
+
+    .mission .mission_content {
+        margin-left: -80px;
+    }
+
+    .meet_ledeership .position_set {
+        justify-content: space-around;
+    }
+
+    /* .meet_ledeership .position_end {
+        justify-content: end;
+    } */
+
+    .casestudy .slick-initialized .slick-slide {
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+
+}
+
+@media (max-width: 991px) {
+    .navbar-nav .dropdown-menu {
+        margin: 0;
+        display: block;
+        border: 0;
+        padding: 0;
+        box-shadow: 0px 0px 22px -7px #fff !important;
+        text-align: center;
+    }
+
+    .navbar .navbar-brand, .navbar .navbar-toggler {
+        margin-bottom: 9px;
+    }
+
+    .navbar-nav .dropdown-item:focus, .navbar-nav .dropdown-item:hover {
+        transform: scale(1);
+    }
+
+    .navbar-nav .dropdown-menu .dropdown-item {
+        font-size: 1.2rem;
+    }
+
+
+
+    .navbar-nav .dropdown-menu .collapse {
+        padding-bottom: 20px;
+    }
+
+    #demo-timegrid {
+        height: 90%;
+    }
+
+    .navbar .nav-link {
+        font-size: 1.2rem;
+    }
+
+    .navbar .nav-link.active::after {
+        display: none;
+    }
+
+    .bg-video-wrap {
+        height: auto;
+    }
+
+    video {
+        width: 100%;
+        height: auto;
+    }
+
+    video {
+        min-width: 0;
+        min-height: 0;
+        z-index: 1;
+    }
+
+    .bg-video-wrap {
+        position: relative;
+        overflow: hidden;
+        /* max-height: 100%;
+        max-width: 100%; */
+        /* background: url(https://designsupply-web.com/samplecontent/vender/codepen/20181014.png) no-repeat center center/cover; */
+    }
+
+    .contant {
+        text-align: center;
+    }
+
+    .wrapper div span::before {
+        margin: auto;
+    }
+
+    .slick-next {
+        right: 0px;
+    }
+
+    .mline {
+        border-bottom: 1px solid #bcbec0;
+        padding-bottom: 12px;
+    }
+
+    .navbar-collapse {
+        background-color: #fff;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        padding-bottom: 10px;
+        box-shadow: 0px 2px 4px black;
+    }
+
+    /* .nav-item{
+            border-bottom: 1px solid;
+        } */
+    /* .dropdown-menu {
+        background-color: #F7FAFD !important;
+        display: block;
+        border: none;
+        text-align: center;
+    } */
+
+    .navbar-nav {
+        padding-right: 25px;
+        padding-left: 25px;
+    }
+
+    .navbar-toggler-icon {
+        width: 1em;
+        height: 1.7em;
+
+    }
+
+    .dropdown-toggle::after {
+        display: none;
+    }
+
+    .slick-prev {
+        left: 0px;
+        z-index: +9;
+    }
+
+    .mission .mission_content.card {
+        width: 80%;
+        margin: auto;
+        margin-top: -60px;
+        height: 100%;
+    }
+
+
+
+    .leadership_card .card-body {
+        right: -130px;
+    }
+
+
+
+
+}
+
+
+
+
+@media screen and (min-width: 768px) {
+    .mbsc-timegrid-row {
+        display: grid;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* .navbar .navbar-brand, .navbar .navbar-toggler {
+        margin-bottom: 15px;
+    } */
+
+    #demo-timegrid {
+        height: 90%;
+    }
+
+    div.book_meeting {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    div.book_meeting img {
+        margin-top: 15px;
+    }
+
+    section.client_think {
+        flex-direction: column;
+    }
+
+    div.card_client {
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    div.card_content {
+        width: 100%;
+    }
+
+    div.client_video {
+        width: 70%;
+        height: 22rem;
+    }
+
+    div.client_image {
+        height: 80px;
+        width: 80px;
+        margin-left: -40px;
+    }
+
+    .csaction {
+        display: block;
+    }
+
+    .mbsc-datepicker-tab-timegrid.mbsc-datepicker-tab {
+        -moz-box-align: start;
+        align-items: flex-start;
+        overflow: auto;
+        position: relative;
+        width: 100%;
+    }
+
+    .meet_ledeership .position_set {
+        justify-content: flex-start;
+    }
+
+}
+
+@media (max-width: 576px) {
+    * {
+        font-size: 65.5%;
+        /* display: none; */
+    }
+
+    .navbar {
+        height: 45px !important;
+    }
+
+    /* .navbar .navbar-brand, .navbar .navbar-toggler {
+        margin-bottom: 28px;
+    } */
+
+    /* .mbsc-timegrid-row {
+        display: grid;
+    } */
+
+    /* word with */
+    .word_with {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    /* #demo-timegrid {
+        height: 90%;
+    } */
+
+    .word_with .row div img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .word_with .row div h1 {
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+
+    /* word with */
+    .meet_ledeership .position_set {
+        justify-content: flex-start !important;
+        margin-bottom: 20px !important;
+    }
+
+    .meet_ledeership .position_end {
+        justify-content: flex-end !important;
+    }
+
+    div.client_video {
+        width: 70%;
+        height: 160px;
+    }
+
+    .mission .mission_content.card {
+        width: 80%;
+        margin: auto;
+        margin-top: -60px;
+        height: 100%;
+    }
+
+    .mission_content p {
+        font-size: 1.2rem;
+    }
+
+    .mission_content h5 {
+        font-size: 1.5rem;
+    }
+
+    .member span, .member p {
+        font-size: 1.6rem;
+    }
+
+    .slider h4, .slider p {
+        font-size: 1.3rem !important;
+    }
+
+    footer .wrapper p,
+    footer .wrapper ul li a,
+    footer .wrapper p strong {
+        font-size: 1.6rem;
+
+    }
+
+    .csaction {
+        display: block;
+    }
+
+    .cover {
+        height: 50vh;
+
+    }
+
+    .mbsc-datepicker-tab.mbsc-datepicker-tab-calendar.mbsc-ios.mbsc-datepicker-tab-active {
+        margin-right: 0px;
+        height: 40%;
+    }
+
+
+    /*  */
+
+    .hidecontent {
+        height: 600px;
+    }
+
+    .mbsc-calendar-controls {
+        font-size: 3em !important;
+    }
+
+    .mbsc-calendar-cell-inner {
+        font-size: 3rem !important;
+    }
+
+    .mbsc-ios.mbsc-datepicker .mbsc-highlighted .mbsc-calendar-day-text, .mbsc-ios.mbsc-datepicker .mbsc-hover .mbsc-calendar-day-text, .mbsc-ios.mbsc-datepicker .mbsc-range-hover-end .mbsc-calendar-day-text, .mbsc-ios.mbsc-datepicker .mbsc-range-hover-start .mbsc-calendar-day-text, .mbsc-ios.mbsc-datepicker .mbsc-selected .mbsc-calendar-day-text {
+        font-size: 2rem;
+
+    }
+
+    .mbsc-datepicker-tab-wrapper .mbsc-datepicker-tab {
+        width: 100%;
+        /* height: 350px; */
+    }
+
+    .mbsc-timegrid-row {
+        font-size: 3rem;
+    }
+
+    .mbsc-datepicker-tab-wrapper .mbsc-datepicker-tab {
+        height: auto;
+    }
+
+    .meet_ledeership .leadership_image img {
+        height: auto;
+    }
+
+    /*  */
+}

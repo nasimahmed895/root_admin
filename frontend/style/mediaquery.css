@@ -1,3 +1,13 @@
+@media (max-width: 1199px) {
+    .touch {
+        text-align: center;
+    }
+
+    .touch img {
+        margin: auto;
+    }
+}
+
 @media (min-width: 992px) {
 
     #demo-timegrid {
@@ -217,6 +227,14 @@
         right: -130px;
     }
 
+    .meet_ledeership .position_set {
+        justify-content: start;
+    }
+
+    .meet_ledeership .position_end {
+        justify-content: end;
+    }
+
 
 
 
@@ -287,9 +305,8 @@
         width: 100%;
     }
 
-    .meet_ledeership .position_set {
-        justify-content: flex-start;
-    }
+
+
 
 }
 
@@ -426,6 +443,11 @@
 
     .meet_ledeership .leadership_image img {
         height: auto;
+    }
+
+    .casestudy .slider_text {
+        width: 80%;
+        margin: auto;
     }
 
     /*  */

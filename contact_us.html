@@ -83,12 +83,12 @@
                 <div class="col-md-10 ">
                     <ul class="toggle_button mb-3 d-flex justify-content-center" id="pills-tab" role="tablist">
                         <li class="nav-item border_re" role="presentation">
-                            <button class="nav-link left " id="pills-home-tab" data-bs-toggle="pill"
+                            <button class="nav-link left active" id="pills-home-tab" data-bs-toggle="pill"
                                 data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home"
                                 aria-selected="true">Get in Touch</button>
                         </li>
                         <li class="nav-item border_re" role="presentation">
-                            <button class="nav-link right active" id="pills-profile-tab" data-bs-toggle="pill"
+                            <button class="nav-link right " id="pills-profile-tab" data-bs-toggle="pill"
                                 data-bs-target="#Message" type="button" role="tab" aria-controls="pills-profile"
                                 aria-selected="false">Send a Message</button>
                         </li>
@@ -101,7 +101,7 @@
                             <div class="row shadow-black b-r-10">
 
                                 <div class="  col-xl-5 " style="border-right: 1px solid #ddd;">
-                                    <div class="card border-0  p-3">
+                                    <div class="card border-0  p-3 touch">
                                         <img src="frontend/Icon_Images/team/eleas.jpg"
                                             class="card-img-top image border-1" alt="...">
                                         <div class="card-body">
@@ -111,7 +111,7 @@
                                             <ul class="card__list f700 p-0">
                                                 <li class="card__item time">30 min</li>
                                                 <li class="card__item confrannce">Web conferencing details provided
-                                                    <br>
+                                                    <!-- <br> -->
                                                     upon confirmation.
                                                 </li>
                                             </ul>
@@ -143,12 +143,54 @@
 
                         </div>
                         <div class="tab-pane fade" id="Message" role="tabpanel" aria-labelledby="pills-profile-tab">
-
-                            cupiditate est aperiam vel veniam fugiat! Nostrum possimus vitae recusandae inventore quo
-                            quisquam
-                            nam
-                            quia perspiciatis!</div>
-
+                            <div class="row mt-5">
+                                <div class="col-md-10 m-auto">
+                                    <div class="card"
+                                        style="background-color: #F7FAFD; border: none;  box-shadow: 0px 0px 6px 1px #CFCECE; padding: 30px 30px;">
+                                        <h5 class="mb-4">Write to us</h5>
+                                        <form action="">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="mb-4">
+                                                        <input style="padding: 15px 25px;" type="text"
+                                                            class="form-control" placeholder="Name, Surename" required>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="mb-4">
+                                                        <input style="padding: 15px 25px;" type="email"
+                                                            class="form-control" placeholder="Email" required>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="mb-4">
+                                                        <input style="padding: 15px 25px;" type="url"
+                                                            class="form-control" placeholder="Website / App Link">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="mb-4">
+                                                        <textarea style="padding: 15px 25px;" class="form-control"
+                                                            rows="4" placeholder="Your Message" required></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="mb-4 d-flex justify-content-between align-items-center">
+                                                        <button
+                                                            style="background-color: #000040; padding: 8px 35px; font-size: 18px; font-weight: 300;"
+                                                            class="btn text-white" type="submit">SEND</button>
+                                                        <button
+                                                            style="background-color: #fff; padding: 5px 10px; font-size: 13px; font-weight: 300; border: 1px solid #ced4da; height: 30px;"
+                                                            class="btn"><i style='font-size:13px; margin: 0px 5px;'
+                                                                class='fas'>&#xf093;</i> Upload File</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -279,8 +321,8 @@
             onChange: function (ev, inst) {             // More info about onChange: https://docs.mobiscroll.com/5-19-2/javascript/datepicker#event-onChange
                 const valueSpan = document.getElementById('selected-value');
                 valueSpan.parentElement.classList.remove('hidden');
-                const [from, to] = inst.getVal();
-                valueSpan.innerHTML = 'from: <code>' + from + '</code><br>to: <code>' + to + '</code>';
+                const [from] = inst.getVal();
+                valueSpan.innerHTML = 'from: <code>' + from + '</code>';
             }
         });
 //         $date=date_create(" Wed Nov 02 2022 01:00:00 GMT+0600 ");

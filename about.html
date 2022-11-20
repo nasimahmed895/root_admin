@@ -13,23 +13,33 @@
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="frontend/plugin/slick/slick.css">
     <link rel="stylesheet" href="frontend/plugin/slick/slick-theme.css">
+    <link rel="stylesheet" href="frontend/font/stylesheet.css">
     <link rel="stylesheet" href="frontend/style/style.css">
     <link rel="stylesheet" href="frontend/style/custom.css">
     <link rel="stylesheet" href="frontend/style/mediaquery.css">
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg "
-        style=" height: 65px; position: fixed; width: 100%;box-shadow: 0px -11px 12px 7px #000000;">
+    <nav class="navbar navbar-expand-lg  sticky-top"
+        style="  position: fixed; width: 100%;box-shadow: 0px -11px 12px 7px #000000;">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html"><img width="128px" src="frontend/Icon_Images/logo.png" alt="logo"
+            <a class="navbar-brand" href="index.html"><img width="180px" src="frontend/Icon_Images/logo.png" alt="logo"
                     srcset=""></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler  " id="navbar-toggler" onclick="myFunction()" type="button"
+                data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"
+                    style="  background-image: url(frontend/Icon_Images/menu.png);"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <button class="navbar-toggler toggler_button" id="navbar-toggler2" onclick="myFunction()" type="button"
+                data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"
+                    style="  background-image: url(frontend/Icon_Images/Menu/Cut.png);"></span>
+            </button>
+
+
+            <div class="collapse navbar-collapse " id="navbarSupportedContent">
                 <ul class="navbar-nav text-center  mb-lg-0 d-flex ">
                     <li class="nav-item">
                         <a class="nav-link " aria-current="page" href="index.html">HOME</a>
@@ -44,9 +54,8 @@
                     </li>
                     <hr class="">
                     <li class="nav-item dropdown p-0">
-                        <a class="nav-link dropdown-toggle   " href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            HOW WE WORK
+                        <a class="nav-link " href="how_we_work.html" role="button">
+                            HOW WE WORK <i class="fas fa-chevron-down word_arrow"></i>
                         </a>
                         <hr class="">
                         <ul class="dropdown-menu ">
@@ -57,31 +66,39 @@
                             <hr class="d">
                         </ul>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact_us.html"><img width="100px"
-                                src="frontend/Icon_Images/cant.png" alt="" srcset=""></a>
+                    <li class="nav-item d-flex justify-content-center align-items-center " style="margin-left: 12px;">
+                        <a class="nav-link contact" href="contact_us.html">CONTACT <div class="icon"></div></a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <div class="extra" style="padding-top: 65px;"></div>
-    <div class="container about ">
+    <div class="extra" style="padding-top: 45px;"></div>
+    <div class="about">
         <div class="slider   text-center" style="background-image:url(frontend/Icon_Images/About\ Us.jpg">
-            <div class="bgclor pt-5 pb-5 ">
-                <h4 class="mb-3 pt-lg-5 f500">Who We Are ?</h4>
-                <p class="pb-lg-5 f300 ff-candara"><span><img width="86px" src="frontend/Icon_Images/Root Devs.png"
-                            alt="logo" srcset=""></span>is a Bangladeshi technology agency <br> that develop web,
-                    mobile, and
-                    computer
-                    software for its IT partner. <br> Here all the creative minds work together. So, whether it's a
-                    mobile
-                    app development, <br> web app or a custom solution unique to your business, <br> you can be sure
-                    your
-                    pro
-                    ject is being handled by experienced professionals from start to finish.<br></p>
+            <div class="bgclor px20">
+                <div class="container">
+                    <h3 class="mb-3 f500">Who We Are ?</h3>
+                    <p class=" ff-Roboto f100"><span class="root">Root</span><span class="devs">Devs</span> is a
+                        Bangladeshi technology agency
+                        <br> that develop web,
+                        mobile, and
+                        computer
+                        software for its IT partner. <br> Here all the creative minds work together. So, whether it's a
+                        mobile
+                        app development, <br> web app or a custom solution unique to your business, <br> you can be sure
+                        your
+                        pro
+                        ject is being handled by experienced professionals from start to finish.<br>
+                    </p>
+                </div>
+
             </div>
         </div>
+    </div>
+
+    <div class="container about ">
+
         <div class="meet_ledeership text-centern pt-5 pb-5">
             <div class="h4 text-center mb-5">Meet With Leadership</div>
             <div class="mcard">
@@ -89,19 +106,20 @@
                     <div class="col-md-6 mb-sm-5 position_set d-flex  ">
                         <div class="leadership_card text-center  position-relative">
                             <div class="leadership_image b-r-10 overflow-hidden">
-                                <img class="float-start b-r-10  " height="auto" object-fit="cover"
-                                    src="frontend/Icon_Images/leadership/pexels-tima-miroshnichenko-6614753.jpg" alt="">
+                                <img class="float-start   " src="frontend/Icon_Images/leadership/ek.png" alt="">
                             </div>
 
                             <div class=" text-center">
-                                <div class="card-body shadow-black   pt-5 pb-5   px-lg-4 ">
-                                    <h5 class="card-title">Elias Khan</h5>
-                                    <p class="card-text pb-3 pt-2">Founder & CEO</p>
-                                    <div class="social_info height">
-                                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                        <a href="#"><i class="fab fa-twitter"></i></a>
-                                        <a href="#"><i class="fab fa-instagram"></i></a>
-                                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <div class="card-body shadow-black   pt-3 pb-4   px-lg-3 ">
+                                    <div class="center">
+                                        <h6 class="card-title">Elias Khan</h6>
+                                        <p class="card-text pb-3 pt-2">Founder & CEO</p>
+                                        <div class="social_info height">
+                                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                            <a href="#"><i class="fab fa-twitter"></i></a>
+                                            <a href="#"><i class="fab fa-instagram"></i></a>
+                                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -110,19 +128,20 @@
                     <div class="col-md-6 mb-sm-5 position_set  position_end d-flex  ">
                         <div class="leadership_card text-center  position-relative">
                             <div class="leadership_image b-r-10 overflow-hidden">
-                                <img class="float-start b-r-10  " height="auto" object-fit="cover"
-                                    src="frontend/Icon_Images/leadership/pexels-mikhail-nilov-6592686.jpg" alt="">
+                                <img class="float-start  " src="frontend/Icon_Images/leadership/mam.png" alt="">
                             </div>
 
                             <div class=" text-center right">
-                                <div class="card-body shadow-black   pt-5 pb-5   px-lg-4 ">
-                                    <h5 class="card-title">Elias Khan</h5>
-                                    <p class="card-text pb-3 pt-2">Founder & CEO</p>
-                                    <div class="social_info height">
-                                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                        <a href="#"><i class="fab fa-twitter"></i></a>
-                                        <a href="#"><i class="fab fa-instagram"></i></a>
-                                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <div class="card-body shadow-black   pt-3 pb-4   px-lg-3 ">
+                                    <div class="center">
+                                        <h6 style="font-size: .8rem;" class="card-title">Abdullah Al Mamun</h6>
+                                        <p class="card-text pb-3 pt-2">Co-Founder</p>
+                                        <div class="social_info height">
+                                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                            <a href="#"><i class="fab fa-twitter"></i></a>
+                                            <a href="#"><i class="fab fa-instagram"></i></a>
+                                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -134,145 +153,47 @@
 
             </div>
         </div>
-        <!-- meet our experts -->
-        <section class="text-center pt-5 pb-5" style="background-color: #F7FAFD;">
-            <h4 class="tbold mb-5">Meet With Our Expert's</h4>
-            <div class="our_team">
-                <div class="member ">
-                    <div class="single_member">
-                        <div class="member_info">
-                            <span>Ariya Zaman</span>
-                            <span>Co-Founder</span>
-                        </div>
+    </div>
 
-                        <div class="middle_info">
-                            <div class="social_info">
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fab fa-instagram"></i></a>
-                                <a href="#"><i class="fab fa-linkedin"></i></a>
-                            </div>
-                            <div class="team_info">
-                                <p>"Great organised consistent communication, Kept all the promise of delivery time.
-                                    Take
+    <!-- meet our experts -->
 
-                                    "</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="team_image">
-                        <img src="frontend/Icon_Images/team/eleas.jpg" alt=""><br>
-                    </div>
-                </div>
-                <div class="member">
-                    <div class="single_member">
-                        <div class="member_info">
-                            <span>Ariya Zaman</span>
-                            <span>Co-Founder</span>
-                        </div>
-
-                        <div class="middle_info">
-                            <div class="social_info">
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fab fa-instagram"></i></a>
-                                <a href="#"><i class="fab fa-linkedin"></i></a>
-                            </div>
-                            <div class="team_info">
-                                <p>"Great organised consistent communication, Kept all the promise of delivery time.
-                                    Take ."</p>
-                            </div>
-                        </div>
+    <section class="text-center  " style=" position: relative; background-color: #1A2849;">
+        <h4 class="tbold py-1  text-white"
+            style="position: absolute;left: 50%; top: 5%;color: white;z-index: +9; transform: translateX(-50%)">Meet
+            With Our Expert's</h4>
+        <div class=" our_team ">
+            <img class=" img_responsive" style=" max-width: 100%;
+                height: auto;
+                object-fit: cover;
+                border-radius: 0;
+               " src="frontend/Icon_Images/ourteam.png" alt="" srcset="">
+        </div>
 
 
-                    </div>
-                    <div class="team_image">
-                        <img src="frontend/Icon_Images/team/mamun.jpg" alt=""><br>
-                    </div>
-                </div>
+    </section>
+    <!-- meet our experts -->
+    <!-- our mission start-->
 
-                <div class="member">
-                    <div class="single_member">
-                        <div class="member_info">
-                            <span>Ariya Zaman</span>
-                            <span>Co-Founder</span>
-                        </div>
+    <div class="container about">
 
-                        <div class="middle_info">
-                            <div class="social_info">
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fab fa-instagram"></i></a>
-                                <a href="#"><i class="fab fa-linkedin"></i></a>
-                            </div>
-                            <div class="team_info">
-                                <p>"Great organised consistent communication, Kept all the promise of delivery time.
-                                    Take
-
-                                    ."</p>
-                            </div>
-                        </div>
-
-
-                    </div>
-                    <div class="team_image">
-                        <img src="frontend/Icon_Images/team/eleas.jpg" alt=""><br>
-                    </div>
-                </div>
-                <div class="member">
-                    <div class="single_member">
-                        <div class="member_info">
-                            <span>Ariya Zaman</span>
-                            <span>Co-Founder</span>
-                        </div>
-
-                        <div class="middle_info">
-                            <div class="social_info">
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fab fa-instagram"></i></a>
-                                <a href="#"><i class="fab fa-linkedin"></i></a>
-                            </div>
-                            <div class="team_info">
-                                <p>"Great organised consistent communication, Kept all the promise of delivery time.
-                                    Take
-
-                                    ."</p>
-                            </div>
-                        </div>
-
-
-                    </div>
-                    <div class="team_image">
-                        <img src="frontend/Icon_Images/team/mamun.jpg" alt=""><br>
-                    </div>
-                </div>
-
-            </div>
-
-
-        </section>
-        <!-- meet our experts -->
-        <!-- our mission start-->
         <div class="mission py-5 ">
             <div class="">
                 <h4 class="text-center mb-5 fbold">Our Mission</h4>
 
-                <div class="row">
-
-                    <div class="col-lg-6 ">
-                        <div class="mission_wrreaper b-r-10 ">
-                            <div class="image transition">
+                <section class="client_think ">
+                    <div class="row d-flex align-items-center">
+                        <div class="col-lg-6 ">
+                            <div class="client_video image transition b-r-20">
                                 <img src="frontend/Icon_Images/Our Mission.jpg" alt="" srcset="" class="img-fluid ">
                             </div>
 
                         </div>
-                    </div>
-                    <div class="col-lg-6 d-flex align-items-center">
-                        <div class="">
-                            <div class="mission_content card shadow-black" style=" padding: 20px; ">
+
+                        <div class="  col-lg-6">
+                            <div class="client_info">
                                 <p>Our mission is simple:</p>
-                                <h5>Make the life of our clients easier And our team of creatives is devoted to making
+                                <h5 class="mb-3">Make the life of our clients easier And our team of creatives is
+                                    devoted to making
                                     that
                                     a
                                     reality.</h5>
@@ -288,15 +209,16 @@
                                     relationships with our customers.</p>
                             </div>
                         </div>
+
                     </div>
-                </div>
-
-
+                </section>
 
             </div>
         </div>
-        <!-- our mission end-->
     </div>
+
+    <!-- our mission end-->
+
 
     <footer>
         <div class="">
@@ -305,7 +227,10 @@
                 <div class="bg-color ">
                     <div class="book_meeting">
                         <span>Book a Meeting With Us, and Let's Discuss</span>
-                        <img src="frontend/Icon_Images/Contact.png" alt="">
+                        <a href="contact_us.html">
+                            <img src="frontend/Icon_Images/Contact.png" alt="">
+                        </a>
+
                     </div>
                 </div>
             </section>
@@ -313,9 +238,9 @@
         <div class="contant ">
 
             <div class="container">
-                <div class="row p-5 pb-2">
+                <div class="row py-5 pb-2">
 
-                    <div class="col-md-3 wrapper">
+                    <div class="col-md-4 wrapper">
                         <div class="mb-5">
                             <span class="tbold">Get In Touch</span>
                         </div>
@@ -332,13 +257,13 @@
                     <div class="col-md-3 wrapper">
                         <div class="mb-5"><span class="tbold">Quick Links</span></div>
                         <ul class="p-0">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Case Study</a></li>
-                            <li><a href="#">How We Work</a></li>
-                            <li><a href="#">Our Team</a></li>
-                            <li><a href="#">Contact Us</a></li>
-                            <li><a href="#">Career</a></li>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="case_study.html">Case Study</a></li>
+                            <li><a href="how_we_work.html">How We Work</a></li>
+                            <li><a href="ourteam.html">Our Team</a></li>
+                            <li><a href="contact_us.html">Contact Us</a></li>
+                            <li><a href="career.html">Career</a></li>
                         </ul>
                     </div>
                     <div class="col-md-3 wrapper Services">
@@ -347,7 +272,7 @@
                         <p>Web Development</p>
                         <p> Custom Software</p>
                     </div>
-                    <div class="col-md-3 wrapper">
+                    <div class="col-md-2 wrapper">
                         <div class="mb-5"><span class="tbold">Follow Us</sp>
                         </div>
 
@@ -383,52 +308,33 @@
 
             </div>
         </div>
+        <div class="contant" style="padding-top: 50px;">
+            <div class="copyright">
+                <p class="f1rem text-center py-3"><i class="far fa-copyright"></i> Copyright 2022 RootDevs All
+                    Rights
+                    Reserved.</p>
+            </div>
+        </div>
 
     </footer>
-
 
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript" src="frontend/plugin/multi-animated-counter.js"></script>
     <script src="frontend/plugin/slick/slick.js"></script>
     <script src="frontend/js/script.js"></script>
-    <script>
+    <script>function myFunction() {
+            var toggler = document.getElementById("navbar-toggler");
+            var toggler2 = document.getElementById("navbar-toggler2");
+            if (toggler.style.display === "none") {
+                toggler.style.display = "block";
+                toggler2.style.display = "none";
+            } else {
+                toggler.style.display = "none";
+                toggler2.style.display = "block";
+            }
+        }</script>
 
-        $('.our_team').slick({
-            dots: true,
-            infinite: true,
-            speed: 300,
-            slidesToShow: 4,
-            slidesToScroll: 2,
-            responsive: [
-                {
-                    breakpoint: 1080,
-                    settings: {
-                        slidesToShow: 3,
-                        slidesToScroll: 1,
-                        infinite: true,
-                        dots: true
-                    }
-                },
-                {
-                    breakpoint: 800,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 1,
-                        dots: true
-                    }
-                },
-                {
-                    breakpoint: 480,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                        dots: true
-                    }
-                }
-            ]
-        });
-    </script>
 </body>
 
 </html>

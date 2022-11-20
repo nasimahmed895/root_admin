@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>Root Devs</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
@@ -12,23 +12,33 @@
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="frontend/plugin/slick/slick.css">
     <link rel="stylesheet" href="frontend/plugin/slick/slick-theme.css">
+    <link rel="stylesheet" href="frontend/font/stylesheet.css">
     <link rel="stylesheet" href="frontend/style/style.css">
+    <link rel="stylesheet" href="frontend/style/custom.css">
     <link rel="stylesheet" href="frontend/style/mediaquery.css">
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg  sticky-top"
-        style=" height: 65px; position: fixed; width: 100%;box-shadow: 0px -11px 12px 7px #000000;">
+        style="  position: fixed; width: 100%;box-shadow: 0px -11px 12px 7px #000000;">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html"><img width="128px" src="frontend/Icon_Images/logo.png" alt="logo"
+            <a class="navbar-brand" href="index.html"><img width="180px" src="frontend/Icon_Images/logo.png" alt="logo"
                     srcset=""></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
+            <button class="navbar-toggler  " id="navbar-toggler" onclick="myFunction()" type="button"
+                data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"
                     style="  background-image: url(frontend/Icon_Images/menu.png);"></span>
             </button>
-            <div class="collapse navbar-collapse shadow-black" id="navbarSupportedContent">
+            <button class="navbar-toggler toggler_button" id="navbar-toggler2" onclick="myFunction()" type="button"
+                data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"
+                    style="  background-image: url(frontend/Icon_Images/Menu/Cut.png);"></span>
+            </button>
+
+
+            <div class="collapse navbar-collapse " id="navbarSupportedContent">
                 <ul class="navbar-nav text-center  mb-lg-0 d-flex ">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="index.html">HOME</a>
@@ -43,9 +53,8 @@
                     </li>
                     <hr class="">
                     <li class="nav-item dropdown p-0">
-                        <a class="nav-link dropdown-toggle   " href="" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            HOW WE WORK
+                        <a class="nav-link " href="how_we_work.html" role="button">
+                            HOW WE WORK <i class="fas fa-chevron-down word_arrow"></i>
                         </a>
                         <hr class="">
                         <ul class="dropdown-menu ">
@@ -56,9 +65,8 @@
                             <hr class="d">
                         </ul>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact_us.html"><img width="100px"
-                                src="frontend/Icon_Images/cant.png" alt="" srcset=""></a>
+                    <li class="nav-item d-flex justify-content-center align-items-center " style="margin-left: 12px;">
+                        <a class="nav-link contact" href="contact_us.html">CONTACT <div class="icon"></div></a>
                     </li>
                 </ul>
             </div>
@@ -66,69 +74,279 @@
     </nav>
 
     <div class="bg-video-wrap">
-        <video src="frontend/video/Keyboard - 1046.mp4" loop muted autoplay>
+        <video src="frontend/video/video.mp4" loop muted autoplay>
         </video>
         <div class="overlay">
         </div>
         <div class="slidcont ">
-            <h2> We Create software For a Sustainable Future. </h2>
-            <h5>We execute our from the start to finish</h5>
+            <h2 class=" fbold"> We Create software For a Sustainable Future. </h2>
+            <h5 class="f500">We execute our ideas from the start to finish</h5>
         </div>
         </h1>
     </div>
 
 
-    <div class="container index">
-        <div class="d-block mb-5">
-            <div class="pt-4 pb-4 card_conatiner bg">
-                <h3 class="my-5">Our Featured Services</h3>
-                <div class="slider demo  overflow-hidden">
-                    <div>
-                        <div class="card text-center">
-                            <img class="card-img-top rounded-circle m-auto my-3" src="frontend/Icon_Images/carrer.png"
-                                alt="">
-                            <div class="card-body p5">
-                                <p class="card-title">Mobile App Development</p>
-                                <p class="card-text">We are a mobile app development company expert in web development
-                                    functional custom mobile apps for iOS, Android and Web.</p>
+    <div class=" index">
+        <div class="">
+            <div class="pt-4 pb-5 card_conatiner  services text-center">
+
+                <div class="container">
+                    <h2 class="my-4">Our Featured Services</h2>
+                    <div class="slider demo  overflow-hidden">
+                        <div>
+                            <div class="card text-center">
+                                <img class="card-img-top rounded-circle m-auto my-3"
+                                    src="frontend/Icon_Images/Featured Services/Group 51.png" alt="">
+                                <div class="card-body p5">
+                                    <p class="card-title">Mobile App Development</p>
+                                    <p class="card-text">We are a mobile app development company expert in web
+                                        development
+                                        functional custom mobile apps for iOS, Android and Web.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="card text-center">
+                                <img class="card-img-top rounded-circle m-auto my-3"
+                                    src="frontend/Icon_Images/Featured Services/Group 52.png" alt="">
+                                <div class="card-body">
+                                    <p class="card-title">Web Development</p>
+                                    <p class="card-text">Our web development team have
+                                        experience With large and complex
+                                        builds. Whether you want a web
+                                        application or a custom app with RootDevs</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="card text-center">
+                                <img class="card-img-top rounded-circle m-auto my-3"
+                                    src="frontend/Icon_Images/Featured Services/Group 53.png" alt="">
+                                <div class="card-body">
+                                    <p class="card-title">Custom Software</p>
+                                    <p class="card-text">We are one of the top software
+                                        development companies in
+                                        Bangladesh and custom software
+                                        development agency in Bangladesh with RootDevs</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div>
-                        <div class="card text-center">
-                            <img class="card-img-top rounded-circle m-auto my-3" src="frontend/Icon_Images/carrer.png"
-                                alt="">
-                            <div class="card-body">
-                                <p class="card-title">Mobile App Development</p>
-                                <p class="card-text">We are a mobile app development company expert in web development
-                                    functional custom mobile apps for iOS, Android and Web.</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- slider -->
+    <div class="rotate bg">
+        <div class="container ">
+            <div class="row ">
+                <div class="col-sm-8">
+                    <div class="content p-5">
+                        <h4>Mobile App Development</h4>
+                        <p class="">We are a mobile app development company expert in web development
+                            functional custom mobile apps for iOS, Android and Web.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class=" pb-5 rotate_width ">
+            <div class=" slider_content ">
+                <div class="slider">
+                    <div class="main  ">
+                        <div class="round position-relative">
+                            <div class="border_wreaper"></div>
+                            <div id="center" class="wrapper">
+                                <div class="item"><img
+                                        src="frontend/Icon_Images/Mobile App Development/image_processing20200325-7690-1w93kuo.png"
+                                        alt="" srcset="">
+                                    <p>Native Android Apps</p>
+                                </div>
+                                <div class="item"><img
+                                        src="frontend/Icon_Images/Mobile App Development/38653ca6395cdd6c637e657784e29099.jpg"
+                                        alt="" srcset="">
+                                    <p>Cross Platform</p>
+                                </div>
+                                <div class="item"><img
+                                        src="frontend/Icon_Images/Mobile App Development/51d0ee14fc61a0166c1367f7137f7cba.png"
+                                        alt="" srcset="">
+                                    <p>Hybrid Apps</p>
+                                </div>
+                                <div class="item"><img
+                                        src="frontend/Icon_Images/Mobile App Development/image_processing20191227-21326-16l2knt.png"
+                                        alt="" srcset="">
+                                    <p>Progressive Web Apps</p>
+                                </div>
+
+                                <div class="item"><img
+                                        src="frontend/Icon_Images/Mobile App Development/image_processing20210611-4268-1n9pqf2.png"
+                                        alt="" srcset="">
+                                    <p>Sports Apps</p>
+                                </div>
+                                <div class="item"><img
+                                        src="frontend/Icon_Images/Mobile App Development/image_processing20210611-4268-1n9pqf2.png"
+                                        alt="" srcset="">
+                                    <p>E-commerce Apps</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div>
-                        <div class="card text-center">
-                            <img class="card-img-top rounded-circle m-auto my-3" src="frontend/Icon_Images/carrer.png"
-                                alt="">
-                            <div class="card-body">
-                                <p class="card-title">Mobile App Development</p>
-                                <p class="card-text">We are a mobile app development company expert in web development
-                                    functional custom mobile apps for iOS, Android and Web.</p>
+                </div>
+            </div>
+            <div class="  d-flex justify-content-center align-items-center slider_content content_img">
+                <div class="slider_img h-100">
+                    <img class=" img_responsive " style="border: 0px; height: 100%;"
+                        src="frontend/Icon_Images/mobile-app-development.png" alt="" srcset="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="rotate bg">
+        <div class="container ">
+            <div class="row">
+                <div class="col-6">
+                    <div class="content p-5">
+                        <h4>Mobile App Development</h4>
+                        <p class="f1rem">We are a mobile app development company: expert in web development
+                            functional custom mobi e apps for iOS, Android and Web.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row pb-5">
+                <div class="col-6 slider_content">
+                    <div class="slider">
+                        <div class="main  ">
+                            <div class="round position-relative">
+                                <div class="border_wreaper"></div>
+                                <div id="center" class="wrapper">
+                                    <div class="item"><img
+                                            src="frontend/Icon_Images/Mobile App Development/38653ca6395cdd6c637e657784e29099.jpg"
+                                            alt="" srcset="">
+                                        <p>Mobile App Development1</p>
+                                    </div>
+                                    <div class="item"><img
+                                            src="frontend/Icon_Images/Mobile App Development/51d0ee14fc61a0166c1367f7137f7cba.png"
+                                            alt="" srcset="">
+                                        <p>Mobile App Development2</p>
+                                    </div>
+                                    <div class="item"><img
+                                            src="frontend/Icon_Images/Mobile App Development/image_processing20191227-21326-16l2knt.png"
+                                            alt="" srcset="">
+                                        <p>Mobile App Development3</p>
+                                    </div>
+                                    <div class="item"><img
+                                            src="frontend/Icon_Images/Mobile App Development/image_processing20200325-7690-1w93kuo.png"
+                                            alt="" srcset="">
+                                        <p>Mobile App Development4</p>
+                                    </div>
+                                    <div class="item"><img
+                                            src="frontend/Icon_Images/Mobile App Development/image_processing20210611-4268-1n9pqf2.png"
+                                            alt="" srcset="">
+                                        <p>Mobile App Development5</p>
+                                    </div>
+                                    <div class="item"><img
+                                            src="frontend/Icon_Images/Mobile App Development/image_processing20210611-4268-1n9pqf2.png"
+                                            alt="" srcset="">
+                                        <p>Mobile App Development6</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6  d-flex justify-content-center align-items-center">
+                    <div class="slider_img h-100">
+                        <img class=" img_responsive " style="border: 0px;"
+                            src="frontend/Icon_Images/mobile-app-development.png" alt="" srcset="">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div> -->
+    <div class="rotate ">
+        <div class="container ">
+            <div class="row ">
+                <div class="col-sm-8 ">
+                    <div class="content p-2 mt-5">
+                        <h4>Web Development</h4>
+                        <!-- <p class="">Our web development team have experience Wlth large and complex
+                            builds. Whether you want a web application or a custom app with.
+                        </p> -->
+                        <p class="">Our web development team have exaperience with large and complex builds. Whether you
+                            want a web application or a custom app with RootDevs </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class=" pb-5 rotate_width ">
+
+            <div class="  d-flex justify-content-center align-items-center slider_content">
+                <div class="slider_img h-100">
+                    <img class=" img_responsive " style="border: 0px; height: 100%;"
+                        src="frontend/Icon_Images/web-development.png" alt="" srcset="">
+                </div>
+            </div>
+            <div class=" slider_content2 ">
+                <div class="slider">
+                    <div class="main2">
+                        <div class="round2 position-relative">
+                            <div class="border_wreaper2"></div>
+                            <div id="center2" class="wrapper2">
+                                <div class="item2"><img
+                                        src="frontend/Icon_Images/Mobile App Development/image_processing20200325-7690-1w93kuo.png"
+                                        alt="" srcset="">
+                                    <p>Native Android Apps</p>
+                                </div>
+                                <div class="item2"><img
+                                        src="frontend/Icon_Images/Mobile App Development/38653ca6395cdd6c637e657784e29099.jpg"
+                                        alt="" srcset="">
+                                    <p>Cross Platform</p>
+                                </div>
+                                <div class="item2"><img
+                                        src="frontend/Icon_Images/Mobile App Development/51d0ee14fc61a0166c1367f7137f7cba.png"
+                                        alt="" srcset="">
+                                    <p>Hybrid Apps</p>
+                                </div>
+                                <div class="item2"><img
+                                        src="frontend/Icon_Images/Mobile App Development/image_processing20191227-21326-16l2knt.png"
+                                        alt="" srcset="">
+                                    <p>Progressive Web Apps</p>
+                                </div>
+
+                                <div class="item2"><img
+                                        src="frontend/Icon_Images/Mobile App Development/image_processing20210611-4268-1n9pqf2.png"
+                                        alt="" srcset="">
+                                    <p>Sports Apps</p>
+                                </div>
+                                <div class="item2"><img
+                                        src="frontend/Icon_Images/Mobile App Development/image_processing20210611-4268-1n9pqf2.png"
+                                        alt="" srcset="">
+                                    <p>E-commerce Apps</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+    <!-- slider -->
 
-        <!-- counter -->
-        <div class="counterbgimg d-block bg mxt-5 " style=" background-image:url('frontend/Icon_Images/counter.jpg') ;">
-            <div id="counters_1 " class="d-flex  text-center  text-white "
-                style="background-color: rgb(8 2 255 / 30%); padding-top: 60px; padding-bottom: 60px;">
-
+    <!-- counter -->
+    <div class="counterbgimg d-block bg mxt-5 " style=" background-image:url('frontend/Icon_Images/counter.png') ;">
+        <div id="counters_1 " class="d-flex  text-center  text-white " style="background-color: rgb(0 0 64 / 60%) ;">
+            <div class="container">
                 <div class="row justify-content-around w-100 " id="counters_2">
                     <div class="col-6 col-sm-3">
                         <div class="coun_cus">
                             <div class="counter count_number" data-TargetNum="87" data-Speed="5000">0</div>
+                            <img src="frontend/Icon_Images/Line 1.png" style=" width: 50%;  background-repeat: no-repeat;
+                            background-size: 100% auto;" alt="" srcset="">
                             <p class="count_text">Complete
                                 <br>
                                 Project
@@ -140,7 +358,9 @@
                         <div class="coun_cus">
                             <div class="hover">
                                 <div class="counter count_number" data-TargetNum="95" data-Speed="5000">0</div>
-                                <p class="count_text">Happpy
+                                <img src="frontend/Icon_Images/Line 1.png" style=" width: 50%;  background-repeat: no-repeat;
+                            background-size: 100% auto;" alt="" srcset="">
+                                <p class="count_text">Happy
                                     <br>
                                     Customer
                                 </p>
@@ -149,7 +369,9 @@
                     </div>
                     <div class="col-6 col-sm-3 ">
                         <div class="coun_cus">
-                            <div class="counter count_number" data-TargetNum="10" data-Speed="3000">0</div>
+                            <div class="counter count_number" data-TargetNum="10" data-Speed="2000">0</div>
+                            <img src="frontend/Icon_Images/Line 1.png" style=" width: 50%;  background-repeat: no-repeat;
+                            background-size: 100% auto;" alt="" srcset="">
                             <p class="count_text">Experienced
                                 <br>
                                 Staff
@@ -159,7 +381,10 @@
                     </div>
                     <div class="col-6 col-sm-3 ">
                         <div class="coun_cus">
-                            <div class="counter count_number" data-TargetNum="12" data-Speed="3000"></div>
+                            <div class="counter count_number" data-TargetNum="12" data-Speed="2000">0</div>
+                            <img src="frontend/Icon_Images/Line 1.png" style=" width: 50%;  background-repeat: no-repeat;
+                            background-size: 100% auto;" alt="" srcset="">
+
                             <p class="count_text">Ongoing
                                 <br>
                                 Project
@@ -169,22 +394,63 @@
                     </div>
 
                 </div>
-
-
             </div>
-        </div>
-        <!-- counter -->
-        <!-- clients -->
-        <div class="bg pt-5 pb-5 overflow-hidden" style="background-color: #F7FAFD;">
-            <h4 class="text-center pb-5 f700e">What Our Clients Think</h4>
 
+
+
+        </div>
+    </div>
+    <!-- counter -->
+
+    <!-- clients -->
+    <div class="bg pt-5 pb-5 overflow-hidden" style="background-color: #F7FAFD;">
+        <h4 class="text-center pb-5 f700e">What Our Clients Think</h4>
+        <div class="container">
             <section class="client_think ">
-                <div class="card_client">
-                    <div class="client_video">
-                        <img src="frontend/Icon_Images/laptop.jpg" alt="">
+                <div class="row d-flex align-items-center">
+                    <div class="col-lg-6 ">
+                        <div class="client_video ">
+                            <video width="" controls muted>
+                                <source
+                                    src="frontend/video/Client Review. Client Name_ Mr. Mainul Ahsan, Director of Babylon Group_Trim.mp4"
+                                    type="video/mp4">
+                            </video>
+                            <div class="client_image">
+                                <img class="shadow-black" src="frontend/Icon_Images/bosssss.png" alt="">
+                            </div>
+                        </div>
+
                     </div>
+
+                    <div class="  col-lg-6 ">
+                        <div class="client_info ">
+                            <p>"It has been a real pleasure to work with RootDevs. I have been extremely happy with
+                                his
+                                professionalism, quality of work and creative ideas. He is very focused on getting
+                                the job
+                                done in a timely manner, and is a great communicator."</p>
+                            <span id="client_name">Ross Toylor</span><br>
+                            <span id="post">CEO, Alpha IT</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- <div class="card_client ">
+                    <div class="client_video position-relative">
+                        <video width="" controls muted>
+                            <source
+                                src="frontend/video/Client Review. Client Name_ Mr. Mainul Ahsan, Director of Babylon Group_Trim.mp4"
+                                type="video/mp4">
+                        </video>
+
+                    </div>
+                    <div class="client_play">
+                        <img src="frontend/Icon_Images/play.png" alt="">
+                    </div>
+
                     <div class="client_image">
-                        <img src="frontend/Icon_Images/case study.jpg" alt="">
+                        <img class="shadow-black" src="frontend/Icon_Images/bosssss.png" alt="">
                     </div>
                 </div>
                 <div class="card_content">
@@ -195,12 +461,12 @@
                         <span id="client_name">Ross Toylor</span><br>
                         <span id="post">CEO, Alpha IT</span>
                     </div>
-                </div>
+                </div> -->
             </section>
 
-            <section class="client_think2 mt-5 mb-5 client" style="width: 90% !important; margin: auto;">
+            <section class="client_think2 mt-5  client" style="width: 90% !important; margin: auto;">
 
-                <div class="single_client">
+                <div class="single_client ">
                     <div class="client_info2 bg-white">
                         <p>"It has been a real pleasure to work with RootDevs. I have been extremely happy with his
                             professionalism, quality of work and creative ideas. He is very focused on getting the job
@@ -208,7 +474,7 @@
                     </div>
                     <div style="margin-top: -75px;">
                         <div class="client_image2  m-auto ">
-                            <img src="frontend/Icon_Images/case study.jpg" alt=""><br>
+                            <img src="frontend/Icon_Images/clin/istockphoto-1034391536-170667a.jpg" alt=""><br>
                             <span id="client_name">Ross Toylor</span><br>
                             <span>CEO, Alpha IT</span>
                         </div>
@@ -223,7 +489,7 @@
                     </div>
                     <div style="margin-top: -75px;">
                         <div class="client_image2  m-auto">
-                            <img src="frontend/Icon_Images/case study.jpg" alt=""><br>
+                            <img src="frontend/Icon_Images/clin/istockphoto-1138561531-170667a.jpg" alt=""><br>
                             <span id="client_name">Ross Toylor</span><br>
                             <span>CEO, Alpha IT</span>
 
@@ -239,7 +505,7 @@
                     </div>
                     <div style="margin-top: -75px;">
                         <div class="client_image2  m-auto">
-                            <img src="frontend/Icon_Images/case study.jpg" alt=""><br>
+                            <img src="frontend/Icon_Images/clin/istockphoto-1352270048-170667a.jpg" alt=""><br>
                             <span id="client_name">Ross Toylor</span><br>
                             <span>CEO, Alpha IT</span>
                         </div>
@@ -337,182 +603,84 @@
 
             </section>
         </div>
-        <!-- clients -->
-        <!-- work with -->
-        <div class="word_with text-center py-5" style="background-color: #E2E2E2;">
-            <h4 class="f700 ff-candara">Technologies We Work With</h4>
-
-            <div class="row mt-5 ">
-
-                <div class="col-xs-2 col-3 col-sm-3 col-md-3 col-lg-3 mb-4">
-                    <img src="frontend/Icon_Images/Technology icons/flutter.svg" alt="flutter" srcset="">
-                    <h1>FLUTTER</h1>
-                </div>
-                <div class="col-xs-2 col-3 col-sm-3 col-md-3 col-lg-3 mb-4">
-                    <img src="frontend/Icon_Images/Technology icons/ios.svg" alt="flutter" srcset="">
-                    <h1>IOS</h1>
-                </div>
-                <div class="col-xs-2 col-3 col-sm-3 col-md-3 col-lg-3 mb-4">
-                    <img src="frontend/Icon_Images/Technology icons/android.svg" alt="flutter" srcset="">
-                    <h1>ANDROID</h1>
-                </div>
-                <div class="col-xs-2 col-3 col-sm-3 col-md-3 col-lg-3 mb-4">
-                    <img src="frontend/Icon_Images/Technology icons/laravel.svg" alt="flutter" srcset="">
-                    <h1>LARAVEL</h1>
-                </div>
-                <div class="col-xs-2 col-3 col-sm-3 col-md-3 col-lg-3 mb-4">
-                    <img src="frontend/Icon_Images/Technology icons/php.svg" alt="flutter" srcset="">
-                    <h1>PHP</h1>
-
-                </div>
-                <div class="col-xs-2 col-3 col-sm-3 col-md-3 col-lg-3 mb-4">
-                    <img src="frontend/Icon_Images/Technology icons/flutter.svg" alt="flutter" srcset="">
-                    <h1>FLUTTER</h1>
-                </div>
-                <div class="col-xs-2 col-3 col-sm-3 col-md-3 col-lg-3 mb-4">
-                    <img src="frontend/Icon_Images/Technology icons/ios.svg" alt="flutter" srcset="">
-                    <h1>IOS</h1>
-                </div>
-                <div class="col-xs-2 col-3 col-sm-3 col-md-3 col-lg-3 mb-4">
-                    <img src="frontend/Icon_Images/Technology icons/android.svg" alt="flutter" srcset="">
-                    <h1>ANDROID</h1>
-                </div>
-                <div class="col-xs-2 col-3 col-sm-3 col-md-3 col-lg-3 mb-4">
-                    <img src="frontend/Icon_Images/Technology icons/laravel.svg" alt="flutter" srcset="">
-                    <h1>LARAVEL</h1>
-                </div>
-                <div class="col-xs-2 col-3 col-sm-3 col-md-3 col-lg-3 mb-4">
-                    <img src="frontend/Icon_Images/Technology icons/php.svg" alt="flutter" srcset="">
-                    <h1>PHP</h1>
-
-
-                </div>
-
-            </div>
-            <!-- work with -->
-
-        </div>
-        <!-- our  team -->
-        <section class="text-center pt-5 pb-5" style="    background-color: #F7FAFD;">
-            <h3 class="tbold mb-5">Our Team</h3>
-            <div class="our_team">
-                <div class="member ">
-                    <div class="single_member">
-                        <div class="member_info">
-                            <span>Ariya Zaman</span>
-                            <span>Co-Founder</span>
-                        </div>
-
-                        <div class="middle_info">
-                            <div class="social_info">
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fab fa-instagram"></i></a>
-                                <a href="#"><i class="fab fa-linkedin"></i></a>
-                            </div>
-                            <div class="team_info">
-                                <p>"Great organised consistent communication, Kept all the promise of delivery time.
-                                    Take
-
-                                    "</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="team_image">
-                        <img src="frontend/Icon_Images/team/eleas.jpg" alt=""><br>
-                    </div>
-                </div>
-                <div class="member">
-                    <div class="single_member">
-                        <div class="member_info">
-                            <span>Ariya Zaman</span>
-                            <span>Co-Founder</span>
-                        </div>
-
-                        <div class="middle_info">
-                            <div class="social_info">
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fab fa-instagram"></i></a>
-                                <a href="#"><i class="fab fa-linkedin"></i></a>
-                            </div>
-                            <div class="team_info">
-                                <p>"Great organised consistent communication, Kept all the promise of delivery time.
-                                    Take ."</p>
-                            </div>
-                        </div>
-
-
-                    </div>
-                    <div class="team_image">
-                        <img src="frontend/Icon_Images/team/mamun.jpg" alt=""><br>
-                    </div>
-                </div>
-
-                <div class="member">
-                    <div class="single_member">
-                        <div class="member_info">
-                            <span>Ariya Zaman</span>
-                            <span>Co-Founder</span>
-                        </div>
-
-                        <div class="middle_info">
-                            <div class="social_info">
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fab fa-instagram"></i></a>
-                                <a href="#"><i class="fab fa-linkedin"></i></a>
-                            </div>
-                            <div class="team_info">
-                                <p>"Great organised consistent communication, Kept all the promise of delivery time.
-                                    Take
-
-                                    ."</p>
-                            </div>
-                        </div>
-
-
-                    </div>
-                    <div class="team_image">
-                        <img src="frontend/Icon_Images/team/eleas.jpg" alt=""><br>
-                    </div>
-                </div>
-                <div class="member">
-                    <div class="single_member">
-                        <div class="member_info">
-                            <span>Ariya Zaman</span>
-                            <span>Co-Founder</span>
-                        </div>
-
-                        <div class="middle_info">
-                            <div class="social_info">
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fab fa-instagram"></i></a>
-                                <a href="#"><i class="fab fa-linkedin"></i></a>
-                            </div>
-                            <div class="team_info">
-                                <p>"Great organised consistent communication, Kept all the promise of delivery time.
-                                    Take
-
-                                    ."</p>
-                            </div>
-                        </div>
-
-
-                    </div>
-                    <div class="team_image">
-                        <img src="frontend/Icon_Images/team/mamun.jpg" alt=""><br>
-                    </div>
-                </div>
-
-            </div>
-
-
-        </section>
-        <!-- our  team -->
 
     </div>
+    <!-- clients -->
+    <!-- work with -->
+    <div class="word_with text-center py-5">
+        <h4 class="f700 ">Technologies We Work With</h4>
+
+
+        <div class="container">
+            <div class="word_grid mt-5 ">
+
+                <div class="work_div mb-4">
+                    <img src="frontend/Icon_Images/Technology icons/flutter.svg" alt="flutter" srcset="">
+                    <h1>FLUTTER</h1>
+                </div>
+                <div class="work_div mb-4">
+                    <img src="frontend/Icon_Images/Technology icons/ios.svg" alt="flutter" srcset="">
+                    <h1>IOS</h1>
+                </div>
+                <div class="work_div mb-4">
+                    <img src="frontend/Icon_Images/Technology icons/android.svg" alt="flutter" srcset="">
+                    <h1>ANDROID</h1>
+                </div>
+                <div class="work_div mb-4">
+                    <img src="frontend/Icon_Images/Technology icons/laravel.svg" alt="flutter" srcset="">
+                    <h1>LARAVEL</h1>
+                </div>
+                <div class="work_div mb-4">
+                    <img src="frontend/Icon_Images/Technology icons/php.svg" alt="flutter" srcset="">
+                    <h1>PHP</h1>
+
+                </div>
+                <div class="work_div mb-4">
+                    <img src="frontend/Icon_Images/Technology icons/mysql.svg" alt="flutter" srcset="">
+                    <h1>mysql</h1>
+                </div>
+                <div class="work_div mb-4">
+                    <img src="frontend/Icon_Images/Technology icons/swift.svg" alt="flutter" srcset="">
+                    <h1>swift</h1>
+                </div>
+                <div class="work_div mb-4">
+                    <img src="frontend/Icon_Images/Technology icons/java.svg" alt="flutter" srcset="">
+                    <h1>java</h1>
+                </div>
+                <div class="work_div mb-4">
+                    <img src="frontend/Icon_Images/Technology icons/react.svg" alt="flutter" srcset="">
+                    <h1>react</h1>
+                </div>
+                <div class="work_div mb-4">
+                    <img src="frontend/Icon_Images/Technology icons/nextjs.svg" alt="flutter" srcset="">
+                    <h1>nextjs</h1>
+
+
+                </div>
+
+            </div>
+        </div>
+
+        <!-- work with -->
+
+    </div>
+    <!-- our  team -->
+    <section class="text-center  " style=" position: relative; background-color: #1A2849;">
+        <h3 class="tbold py-1  text-white"
+            style="position: absolute;left: 50%; top: 5%;color: white;z-index: +9; transform: translateX(-50%)">Our
+            Team</h3>
+        <div class=" our_team ">
+            <img class=" img_responsive" style=" max-width: 100%;
+                height: auto;
+                object-fit: cover;
+                border-radius: 0;
+               " src="frontend/Icon_Images/ourteam.png" alt="" srcset="">
+        </div>
+
+
+    </section>
+    <!-- our  team -->
+
 
     <footer>
         <div class="">
@@ -521,7 +689,10 @@
                 <div class="bg-color ">
                     <div class="book_meeting">
                         <span>Book a Meeting With Us, and Let's Discuss</span>
-                        <img src="frontend/Icon_Images/Contact.png" alt="">
+                        <a href="contact_us.html">
+                            <img src="frontend/Icon_Images/Contact.png" alt="">
+                        </a>
+
                     </div>
                 </div>
             </section>
@@ -529,9 +700,9 @@
         <div class="contant ">
 
             <div class="container">
-                <div class="row p-5 pb-2">
+                <div class="row py-5 pb-2">
 
-                    <div class="col-md-3 wrapper">
+                    <div class="col-md-4 wrapper">
                         <div class="mb-5">
                             <span class="tbold">Get In Touch</span>
                         </div>
@@ -548,13 +719,13 @@
                     <div class="col-md-3 wrapper">
                         <div class="mb-5"><span class="tbold">Quick Links</span></div>
                         <ul class="p-0">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Case Study</a></li>
-                            <li><a href="#">How We Work</a></li>
-                            <li><a href="#">Our Team</a></li>
-                            <li><a href="#">Contact Us</a></li>
-                            <li><a href="#">Career</a></li>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="case_study.html">Case Study</a></li>
+                            <li><a href="how_we_work.html">How We Work</a></li>
+                            <li><a href="ourteam.html">Our Team</a></li>
+                            <li><a href="contact_us.html">Contact Us</a></li>
+                            <li><a href="career.html">Career</a></li>
                         </ul>
                     </div>
                     <div class="col-md-3 wrapper Services">
@@ -563,7 +734,7 @@
                         <p>Web Development</p>
                         <p> Custom Software</p>
                     </div>
-                    <div class="col-md-3 wrapper">
+                    <div class="col-md-2 wrapper">
                         <div class="mb-5"><span class="tbold">Follow Us</sp>
                         </div>
 
@@ -599,8 +770,17 @@
 
             </div>
         </div>
+        <div class="contant" style="padding-top: 50px;">
+            <div class="copyright">
+                <p class="f1rem text-center py-3"><i class="far fa-copyright"></i> Copyright 2022 RootDevs All
+                    Rights
+                    Reserved.</p>
+            </div>
+        </div>
 
     </footer>
+
+
 
 
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
@@ -610,80 +790,55 @@
     <script src="frontend/js/script.js"></script>
     <script>
         $(document).ready(function () {
+
+
             $('.demo').slick({
-                dots: true,
+                prevArrow: "<img class='a-left control-c prev slick-prev' src='frontend/Icon_Images/left.png'>",
+                nextArrow: "<img class='a-right control-c next slick-next' src='frontend/Icon_Images/right.png'>",
                 infinite: true,
                 speed: 300,
-                slidesToShow: 4,
-                slidesToScroll: 4,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                centerPadding: '40px',
                 responsive: [
+                    {
+                        breakpoint: 1200,
+                        settings: {
+                            slidesToShow: 2.5,
+                            slidesToScroll: 1,
+                            infinite: true,
+                        }
+                    },
                     {
                         breakpoint: 1024,
                         settings: {
-                            slidesToShow: 3,
+                            slidesToShow: 2,
                             slidesToScroll: 1,
                             infinite: true,
-                            dots: true
                         }
                     },
                     {
                         breakpoint: 800,
                         settings: {
-                            slidesToShow: 2,
-                            slidesToScroll: 1,
-                            dots: true
-                        }
-                    },
-                    {
-                        breakpoint: 480,
-                        settings: {
-                            slidesToShow: 1,
-                            slidesToScroll: 1,
-                            dots: true
-                        }
-                    }
-                ]
-            });
-
-
-            $('.our_team').slick({
-                dots: true,
-                infinite: true,
-                speed: 300,
-                slidesToShow: 4,
-                slidesToScroll: 2,
-                responsive: [
-                    {
-                        breakpoint: 1080,
-                        settings: {
-                            slidesToShow: 3,
+                            slidesToShow: 1.5,
                             slidesToScroll: 1,
                             infinite: true,
-                            dots: true
                         }
                     },
                     {
-                        breakpoint: 800,
-                        settings: {
-                            slidesToShow: 2,
-                            slidesToScroll: 1,
-                            dots: true
-                        }
-                    },
-                    {
-                        breakpoint: 480,
+                        breakpoint: 500,
                         settings: {
                             slidesToShow: 1,
                             slidesToScroll: 1,
-                            dots: true
                         }
                     }
                 ]
             });
+
 
             $('.client_think2').slick({
-                dots: true,
-                infinite: true,
+                prevArrow: "<img class='a-left control-c prev slick-prev' src='frontend/Icon_Images/left.png'>",
+                nextArrow: "<img class='a-right control-c next slick-next' src='frontend/Icon_Images/right.png'>",
                 speed: 300,
                 slidesToShow: 3,
                 slidesToScroll: 1,
@@ -694,33 +849,193 @@
                             slidesToShow: 2,
                             slidesToScroll: 2,
                             infinite: true,
-                            dots: true
                         }
                     },
                     {
                         breakpoint: 770,
                         settings: {
                             slidesToShow: 1,
-                            slidesToScroll: 1
+                            slidesToScroll: 1,
+                            infinite: true,
                         }
                     },
                     {
                         breakpoint: 680,
                         settings: {
                             slidesToShow: 1,
-                            slidesToScroll: 1
+                            slidesToScroll: 1,
+                            infinite: true,
                         }
                     }
                 ]
             });
 
-            // $('.counter').counterUp({
-            //     delay: 10,
-            //     time: 1000
-            // });
+
         });
 
+
+
+        function myFunction() {
+            var toggler = document.getElementById("navbar-toggler");
+            var toggler2 = document.getElementById("navbar-toggler2");
+            if (toggler.style.display === "none") {
+                toggler.style.display = "block";
+                toggler2.style.display = "none";
+
+                toggler.classList.add("nav_active");
+                toggler2.classList.remove("nav_active");
+            } else {
+                toggler.style.display = "none";
+                toggler2.style.display = "block";
+
+                toggler.classList.remove("nav_active");
+                toggler2.classList.add("nav_active");
+            }
+        }
+
     </script>
+
+    <script>
+    //     function myFunction2(nav) {
+
+    //         if (nav.matches) { // If media query matches
+    //             var togglera = document.getElementsByClassName("nav_active");
+    //             var togglera2 = document.getElementsByClassName("nav_active");
+
+    //             // document.body.style.backgroundColor = "black";
+    //         } else {
+    //             // document.body.style.backgroundColor = "pink";
+    //             var togglera = document.getElementsByClassName("nav_active");
+    //             var togglera2 = document.getElementsByClassName("nav_active");
+    //             togglera.style.display = "none";
+    //             togglera2.style.display = "none";
+    //         }
+    //     }
+
+    //     var nav = window.matchMedia("(max-width: 991px)")
+    //     myFunction2(nav) // Call listener function at run time
+    //     nav.addListener(myFunction2) // Attach listener function on state changes
+    // </script>
+    <script>
+
+        var htmlCollection = document.getElementsByClassName('item');
+        //getting elements by class name into an HTMLCollection
+
+        var itemsId = Array.from(htmlCollection);
+        //turning the HTMLcollection into an array for easier manipulation of the elements
+
+        var sectionDeg = 360 / itemsId.length;
+        //sectioning the (imaginary) circle into a number of section equalling the number of items
+        //it can be used on more elements
+
+        var radianSectionDeg = sectionDeg * Math.PI * 2 / 360;
+        //transforming from degrees into radians
+
+        var radiusLength = 270;
+        //the distance between the center of the circle to the element
+        //edit this number to increase/decrease that distance
+
+        for (var i = 0; i < itemsId.length; i++) {
+            itemsId[i].style.top = radiusLength * Math.sin(radianSectionDeg * i - 5.215) - 50 + 'px';
+            itemsId[i].style.left = radiusLength * Math.cos(radianSectionDeg * i - 5.220) - 50 + 'px';
+        }
+
+
+        var rotation = 0;
+        var center = document.getElementById('center');
+        var ReferenceIndex = 0;
+        showReferences();
+        function showReferences() {
+
+
+            var i;
+            var References = document.getElementsByClassName("item");
+            for (i = 0; i < References.length; i++) {
+                References[i].classList.remove('active');
+            }
+            ReferenceIndex++;
+            if (ReferenceIndex > References.length) {
+                ReferenceIndex = 1;
+
+            }
+            References[ReferenceIndex - 1].classList.add('active');
+            setTimeout(showReferences, 3000);
+
+
+            rotation = rotation - radianSectionDeg;
+            center.style.transform = 'rotate(' + rotation + 'rad)';
+            for (var i = 0; i < itemsId.length; i++) {
+                itemsId[i].style.transform = 'rotate(' + -rotation + 'rad)';
+                // itemsId[i].style.transition = ' 100ms ease all';
+                // transition: 300ms ease all;r
+            }
+
+
+        }
+    </script>
+    <script>
+
+        var htmlCollection2 = document.getElementsByClassName('item2');
+        //getting elements by class name into an HTMLCollection
+
+        var itemsId2 = Array.from(htmlCollection2);
+        //turning the HTMLcollection into an array for easier manipulation of the elements
+
+        var sectionDeg2 = 360 / itemsId2.length;
+        //sectioning the (imaginary) circle into a number of section equalling the number of items
+        //it can be used on more elements
+
+        var radianSectionDeg2 = sectionDeg2 * Math.PI * 2 / 360;
+        //transforming from degrees into radians
+
+        var radiusLength2 = 270;
+        //the distance between the center of the circle to the element
+        //edit this number to increase/decrease that distance
+
+        for (var i = 0; i < itemsId2.length; i++) {
+            itemsId2[i].style.top = radiusLength2 * Math.sin(radianSectionDeg2 * i - 2.120) - 50 + 'px';
+            itemsId2[i].style.left = radiusLength2 * Math.cos(radianSectionDeg2 * i - 2.120) - 50 + 'px';
+        }
+
+
+        var rotation2 = 0;
+        var center2 = document.getElementById('center2');
+        var ReferenceIndex2 = 0;
+        showReferences2();
+        function showReferences2() {
+
+
+            var i;
+            var References2 = document.getElementsByClassName("item2");
+            for (i = 0; i < References2.length; i++) {
+                References2[i].classList.remove('active');
+            }
+            ReferenceIndex2++;
+            if (ReferenceIndex2 > References2.length) {
+                ReferenceIndex2 = 1;
+
+            }
+            References2[ReferenceIndex2 - 1].classList.add('active');
+            setTimeout(showReferences2, 3000);
+
+
+            rotation2 = rotation2 - radianSectionDeg2;
+            center2.style.transform = 'rotate(' + rotation2 + 'rad)';
+            for (var i = 0; i < itemsId2.length; i++) {
+                itemsId2[i].style.transform = 'rotate(' + -rotation2 + 'rad)';
+                // itemsId2[i].style.transition = ' 100ms ease all';
+                // transition: 300ms ease all;r
+            }
+
+
+        }
+    </script>
+
+
+
+
+
+
 </body>
 
 </html>

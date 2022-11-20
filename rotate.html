@@ -162,11 +162,15 @@
                 font-size: 1em;
             }
         } */
+        /* .subho {
+            width: 150px;
+            height: 150px;
+        } */
     </style>
 
 
     <div id="center" class="wrapper">
-        <div class="round">
+        <div class="round ">
             <div class="item">1</div>
             <div class="item">2</div>
             <div class="item">3</div>
@@ -177,8 +181,8 @@
     </div>
 
     <div class="controls selection-off">
-        <div class="left selection-off" onclick="turnLeft()"><i class="fas fa-caret-left"></i></div>
-        <div class="right selection-off" onclick="turnRight()"><i class="fas fa-caret-right"></i></div>
+        <div class="left selection-off dot" onclick="turnLeft()"><i class="fas fa-caret-left"></i></div>
+        <div class="right selection-off dot" onclick="turnRight()"><i class="fas fa-caret-right"></i></div>
     </div>
 
 
@@ -219,6 +223,7 @@
 
         function turnLeft() {
             rotation = rotation + radianSectionDeg;
+            console.log(rotation = rotation + radianSectionDeg);
             center.style.transform = 'rotate(' + rotation + 'rad)';
             for (var i = 0; i < itemsId.length; i++) {
                 itemsId[i].style.transform = 'rotate(' + -rotation + 'rad)';
@@ -227,6 +232,7 @@
 
         function turnRight() {
             rotation = rotation - radianSectionDeg;
+            console.log(rotation = rotation - radianSectionDeg);
             center.style.transform = 'rotate(' + rotation + 'rad)';
             for (var i = 0; i < itemsId.length; i++) {
                 itemsId[i].style.transform = 'rotate(' + -rotation + 'rad)';
@@ -234,6 +240,44 @@
         }
 //both these functions rotate the wrapper
 //they rotate the inner elements too, to keep them straight
+
+
+
+
+    </script>
+    <script>
+
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+
+        function showSlides(n) {
+
+            let i;
+            let slides = document.getElementsByClassName("item");
+            let slidesa = document.getElementsByClassName("item");
+            // let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slidesa.length }
+
+            for (i = 0; i < slidesa.length; i++) {
+                slidesa[i].className = slidesa[i].className.replace(" subho", "");
+            }
+            slidesa[slideIndex - 1].className += " subho";
+            // for (i = 0; i < dots.length; i++) {
+            //     dots[i].className = dots[i].className.replace(" active", "");
+            // }
+            slides[slideIndex - 1].style.display = "block";
+            // dots[slideIndex - 1].className += " active";
+        }
     </script>
 </body>
 

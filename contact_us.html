@@ -11,26 +11,36 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link rel="stylesheet" href="frontend/style/mobiscroll.javascript.min.css">
+    <link rel="stylesheet" href="frontend/style/jquery.datetimepicker.min.css">
     <link rel="stylesheet" href="frontend/plugin/slick/slick.css">
     <link rel="stylesheet" href="frontend/plugin/slick/slick-theme.css">
+    <link rel="stylesheet" href="frontend/font/stylesheet.css">
     <link rel="stylesheet" href="frontend/style/style.css">
     <link rel="stylesheet" href="frontend/style/custom.css">
     <link rel="stylesheet" href="frontend/style/mediaquery.css">
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg "
-        style=" height: 65px; position: fixed; width: 100%;box-shadow: 0px -11px 12px 7px #000000;">
+    <nav class="navbar navbar-expand-lg  sticky-top"
+        style="  position: fixed; width: 100%;box-shadow: 0px -11px 12px 7px #000000;">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html"><img width="128px" src="frontend/Icon_Images/logo.png" alt="logo"
+            <a class="navbar-brand" href="index.html"><img width="180px" src="frontend/Icon_Images/logo.png" alt="logo"
                     srcset=""></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler  " id="navbar-toggler" onclick="myFunction()" type="button"
+                data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"
+                    style="  background-image: url(frontend/Icon_Images/menu.png);"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <button class="navbar-toggler toggler_button" id="navbar-toggler2" onclick="myFunction()" type="button"
+                data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"
+                    style="  background-image: url(frontend/Icon_Images/Menu/Cut.png);"></span>
+            </button>
+
+
+            <div class="collapse navbar-collapse " id="navbarSupportedContent">
                 <ul class="navbar-nav text-center  mb-lg-0 d-flex ">
                     <li class="nav-item">
                         <a class="nav-link " aria-current="page" href="index.html">HOME</a>
@@ -45,9 +55,8 @@
                     </li>
                     <hr class="">
                     <li class="nav-item dropdown p-0">
-                        <a class="nav-link dropdown-toggle   " href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            HOW WE WORK
+                        <a class="nav-link " href="how_we_work.html" role="button">
+                            HOW WE WORK <i class="fas fa-chevron-down word_arrow"></i>
                         </a>
                         <hr class="">
                         <ul class="dropdown-menu ">
@@ -58,20 +67,20 @@
                             <hr class="d">
                         </ul>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="contact_us.html"><img width="100px"
-                                src="frontend/Icon_Images/cant.png" alt="" srcset=""></a>
+                    <li class="nav-item d-flex justify-content-center align-items-center " style="margin-left: 12px;">
+                        <a class="nav-link contact active" href="contact_us.html">CONTACT <div class="icon"></div></a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <div class="extra" style="padding-top: 65px;"></div>
+
+    <div class="extra" style="padding-top: 45px;"></div>
     <div class="slider contact_us  text-center"
         style="background-image:url(frontend/Icon_Images/ezgif.com-gif-maker.jpg)">
         <div class=" bgclor  " style="padding-top: 100px; padding-bottom: 100px;">
-            <h4 class=" mb-3 pt-lg-5">Talk to our project manager today!</h4>
-            <p class="pb-lg-5 f400">We're always ready for your new project. <br>
+            <h2 class=" mb-3 pt-lg-5">Talk to our project manager today!</h2>
+            <p class="pb-lg-5 text-center">We're always ready for your new project. <br>
                 So, feel free to book a meeting withG. Let's discuss about your next software development</p>
         </div>
     </div>
@@ -81,7 +90,7 @@
             <div class="row justify-content-center">
 
                 <div class="col-md-10 ">
-                    <ul class="toggle_button mb-3 d-flex justify-content-center" id="pills-tab" role="tablist">
+                    <ul class="toggle_button mb-4 d-flex justify-content-center" id="pills-tab" role="tablist">
                         <li class="nav-item border_re" role="presentation">
                             <button class="nav-link left active" id="pills-home-tab" data-bs-toggle="pill"
                                 data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home"
@@ -90,7 +99,7 @@
                         <li class="nav-item border_re" role="presentation">
                             <button class="nav-link right " id="pills-profile-tab" data-bs-toggle="pill"
                                 data-bs-target="#Message" type="button" role="tab" aria-controls="pills-profile"
-                                aria-selected="false">Send a Message</button>
+                                aria-selected="false">Send Message</button>
                         </li>
 
                     </ul>
@@ -99,18 +108,19 @@
                             aria-labelledby="pills-home-tab">
 
                             <div class="row shadow-black b-r-10">
-
-                                <div class="  col-xl-5 " style="border-right: 1px solid #ddd;">
-                                    <div class="card border-0  p-3 touch">
+                                <div class="  col-xl-5 p-0" style="border-right: 1px solid #ddd;">
+                                    <div class="card border-0  p-4 touch">
                                         <img src="frontend/Icon_Images/team/eleas.jpg"
                                             class="card-img-top image border-1" alt="...">
                                         <div class="card-body">
-                                            <h6 class="card-title text-secondary">Elias Khan</h6>
-                                            <h5 class="fbold ff-candara">Strategic Planning with <br>
-                                                Manager, Live!</h5>
-                                            <ul class="card__list f700 p-0">
-                                                <li class="card__item time">30 min</li>
-                                                <li class="card__item confrannce">Web conferencing details provided
+                                            <h5 class="card-title text-secondary my-3 ff-Helvetica">Elias Khan</h5>
+                                            <h5 class="fbold ff-Helvetica">Strategic Planning with Manager, Live!</h5>
+                                            <ul class="card__list f700 p-0 ">
+                                                <li class="card__item time ">30 min</li>
+                                                <li class="card__item confrannce ">Web
+                                                    conferencing
+                                                    details
+                                                    provided
                                                     <!-- <br> -->
                                                     upon confirmation.
                                                 </li>
@@ -133,56 +143,92 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class=" col-xl-7 hidecontent p-3">
-                                    <h5 class="text-center">Select a Date & Time</h5>
-                                    <div id="demo-timegrid"></div>
-                                    <span id="selected-value"></span>.
-                                </div>
+                                <div class=" col-xl-7 hidecontent p-3 fl">
+                                    <span id="selected-value"></span>
 
+                                    <div class="dateandtime">
+                                        <h5 class="text-center">Select a Date & Time</h5>
+                                        <div id="datetimepicker3"></div>
+                                        <button id="other" class="btn bg-primary text-white float-end">Confirm</button>
+
+                                    </div>
+                                    <button class="btn back bg-primary text-white d-none">Back</button>
+                                    <div class="wreaper">
+                                    </div>
+
+                                </div>
                             </div>
 
                         </div>
                         <div class="tab-pane fade" id="Message" role="tabpanel" aria-labelledby="pills-profile-tab">
-                            <div class="row mt-5">
-                                <div class="col-md-10 m-auto">
+                            <div class="row mt-5 w-100">
+                                <div class="col-md-10 m-auto w-100">
                                     <div class="card"
-                                        style="background-color: #F7FAFD; border: none;  box-shadow: 0px 0px 6px 1px #CFCECE; padding: 30px 30px;">
+                                        style="background-color: #fff; border: none;  box-shadow: 0px 0px 6px 1px #CFCECE; padding: 30px 30px;">
                                         <h5 class="mb-4">Write to us</h5>
                                         <form action="">
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <div class="mb-4">
-                                                        <input style="padding: 15px 25px;" type="text"
-                                                            class="form-control" placeholder="Name, Surename" required>
+                                                        <div class="input-group flex-nowrap ">
+                                                            <span class="input-group-text" style="padding: 0.9rem;"
+                                                                id="addon-wrapping"><img style="width: 21px;"
+                                                                    src="frontend/Icon_Images/Root_icons/user (2).png"
+                                                                    alt="" sizes="" srcset=""></span>
+                                                            <input type="text" class="form-control"
+                                                                placeholder="Your Name*" />
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="mb-4">
-                                                        <input style="padding: 15px 25px;" type="email"
-                                                            class="form-control" placeholder="Email" required>
+                                                        <div class="input-group flex-nowrap ">
+                                                            <span class="input-group-text" style="    padding: 0.8rem;"
+                                                                id="addon-wrapping"><img style="width: 23px;"
+                                                                    src="frontend/Icon_Images/Root_icons/mail.png"
+                                                                    alt="" srcset=""></span>
+                                                            <input type="text" class="form-control"
+                                                                placeholder="Your Mail*" />
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-12">
                                                     <div class="mb-4">
-                                                        <input style="padding: 15px 25px;" type="url"
-                                                            class="form-control" placeholder="Website / App Link">
+                                                        <div class="input-group flex-nowrap ">
+                                                            <span class="input-group-text" id="addon-wrapping"><img
+                                                                    src="frontend/Icon_Images/Root_icons/attach-file.png"
+                                                                    alt="" srcset=""></span>
+                                                            <input type="text" class="form-control"
+                                                                placeholder="Website / App Link" />
+
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-12">
                                                     <div class="mb-4">
-                                                        <textarea style="padding: 15px 25px;" class="form-control"
-                                                            rows="4" placeholder="Your Message" required></textarea>
+                                                        <div class="input-group flex-nowrap ">
+                                                            <span class="input-group-text" id="addon-wrapping"><img
+                                                                    src="frontend/Icon_Images/Root_icons/send.png"
+                                                                    alt="" srcset=""></span>
+                                                            <textarea class="form-control" rows="4"
+                                                                placeholder="Your Message" required></textarea>
+
+                                                        </div>
+
                                                     </div>
-                                                </div>
-                                                <div class="col-md-12">
-                                                    <div class="mb-4 d-flex justify-content-between align-items-center">
-                                                        <button
-                                                            style="background-color: #000040; padding: 8px 35px; font-size: 18px; font-weight: 300;"
-                                                            class="btn text-white" type="submit">SEND</button>
-                                                        <button
-                                                            style="background-color: #fff; padding: 5px 10px; font-size: 13px; font-weight: 300; border: 1px solid #ced4da; height: 30px;"
-                                                            class="btn"><i style='font-size:13px; margin: 0px 5px;'
-                                                                class='fas'>&#xf093;</i> Upload File</button>
+                                                    <div class="col-md-12">
+                                                        <div
+                                                            class="mb-4 d-flex justify-content-between align-items-center">
+                                                            <button
+                                                                style="background-color: #000040; padding: 8px 35px; font-size: 18px; font-weight: 400;"
+                                                                class="btn text-white" type="submit">SEND</button>
+                                                            <div class='file file--upload'>
+                                                                <label for='input-file'>
+                                                                    <i class="fas fa-cloud-upload-alt"></i>Upload
+                                                                </label>
+                                                                <input id='input-file' type='file' />
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -212,6 +258,7 @@
         </div>
     </div>
 
+
     <footer>
         <div class="">
             <section class="book_meeting_banner "
@@ -219,7 +266,10 @@
                 <div class="bg-color ">
                     <div class="book_meeting">
                         <span>Book a Meeting With Us, and Let's Discuss</span>
-                        <img src="frontend/Icon_Images/Contact.png" alt="">
+                        <a href="contact_us.html">
+                            <img src="frontend/Icon_Images/Contact.png" alt="">
+                        </a>
+
                     </div>
                 </div>
             </section>
@@ -227,9 +277,9 @@
         <div class="contant ">
 
             <div class="container">
-                <div class="row p-5 pb-2">
+                <div class="row py-5 pb-2">
 
-                    <div class="col-md-3 wrapper">
+                    <div class="col-md-4 wrapper">
                         <div class="mb-5">
                             <span class="tbold">Get In Touch</span>
                         </div>
@@ -246,13 +296,13 @@
                     <div class="col-md-3 wrapper">
                         <div class="mb-5"><span class="tbold">Quick Links</span></div>
                         <ul class="p-0">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Case Study</a></li>
-                            <li><a href="#">How We Work</a></li>
-                            <li><a href="#">Our Team</a></li>
-                            <li><a href="#">Contact Us</a></li>
-                            <li><a href="#">Career</a></li>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="case_study.html">Case Study</a></li>
+                            <li><a href="how_we_work.html">How We Work</a></li>
+                            <li><a href="ourteam.html">Our Team</a></li>
+                            <li><a href="contact_us.html">Contact Us</a></li>
+                            <li><a href="career.html">Career</a></li>
                         </ul>
                     </div>
                     <div class="col-md-3 wrapper Services">
@@ -261,7 +311,7 @@
                         <p>Web Development</p>
                         <p> Custom Software</p>
                     </div>
-                    <div class="col-md-3 wrapper">
+                    <div class="col-md-2 wrapper">
                         <div class="mb-5"><span class="tbold">Follow Us</sp>
                         </div>
 
@@ -297,38 +347,156 @@
 
             </div>
         </div>
+        <div class="contant" style="padding-top: 50px;">
+            <div class="copyright">
+                <p class="f1rem text-center py-3"><i class="far fa-copyright"></i> Copyright 2022 RootDevs All
+                    Rights
+                    Reserved.</p>
+            </div>
+        </div>
 
     </footer>
 
-
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="frontend/js/mobiscroll.javascript.min.js"></script>
     <script type="text/javascript" src="frontend/plugin/multi-animated-counter.js"></script>
     <script src="frontend/plugin/slick/slick.js"></script>
+    <script src="frontend/plugin/jquery.datetimepicker.full.min.js"></script>
     <script src="frontend/js/script.js"></script>
     <script>
-        mobiscroll.setOptions({
-            locale: mobiscroll.localeEn,         // Specify language like: locale: mobiscroll.localePl or omit setting to use default
-            theme: 'ios',                        // Specify theme like: theme: 'ios' or omit setting to use default
-            themeVariant: 'light'                // More info about themeVariant: https://docs.mobiscroll.com/5-19-2/javascript/calendar#opt-themeVariant
-        });
-        mobiscroll.datepicker('#demo-timegrid', {
-            controls: ['calendar', 'timegrid'],  // More info about controls: https://docs.mobiscroll.com/5-19-2/javascript/calendar#opt-controls
-            display: 'inline',
-            displayTimezone: 'local',  // timezonePlugin: mobiscroll.momentTimezone,                   // Specify display mode like: display: 'bottom' or omit setting to use default
-            select: 'range',                            // More info about select: https://docs.mobiscroll.com/5-19-2/javascript/datepicker#opt-select
-            onChange: function (ev, inst) {             // More info about onChange: https://docs.mobiscroll.com/5-19-2/javascript/datepicker#event-onChange
-                const valueSpan = document.getElementById('selected-value');
-                valueSpan.parentElement.classList.remove('hidden');
-                const [from] = inst.getVal();
-                valueSpan.innerHTML = 'from: <code>' + from + '</code>';
+        function myFunction() {
+            var toggler = document.getElementById("navbar-toggler");
+            var toggler2 = document.getElementById("navbar-toggler2");
+            if (toggler.style.display === "none") {
+                toggler.style.display = "block";
+                toggler2.style.display = "none";
+            } else {
+                toggler.style.display = "none";
+                toggler2.style.display = "block";
+            }
+        }
+
+
+        $('#datetimepicker3').datetimepicker({
+            inline: true,
+            step: 30,
+            hours12: true,
+            // defaultSelect: false,
+            scrollMonth: false,
+            validateOnBlur: true,
+            // scrollInput: true,
+            scrollTime: true,
+
+
+
+            onChangeDateTime: function (dp, $input) {
+                console.log($input.val());
             }
         });
-//         $date=date_create(" Wed Nov 02 2022 01:00:00 GMT+0600 ");
-// $time_stamp = date_format($date,"Y-m-d D H:i:sP");
-// echo(strtotime($time_stamp)) . "<br>";
+        console.log($('#datetimepicker3').datetimepicker('getValue'));
+
+
+
+        //         $date=date_create(" Wed Nov 02 2022 01:00:00 GMT+0600 ");
+        // $time_stamp = date_format($date,"Y-m-d D H:i:sP");
+        // echo(strtotime($time_stamp)) . "<br>";
+        $(document).on('click', '#other', function () {
+            $(".xdsoft_timepicker .xdsoft_current").click();
+
+        });
+        //         $("#other").click(function () {
+        //         });
+
+
+        // $(document).ready(function () {
+        //     $(".mbsc-timegrid-cell").hover(function () {
+        //         // console.log(this.lastElementChild);
+        //         $(this).append("<button class=' mbsc-selected mbsc-ios tconfirm w-50 h-100 btn btn-dark text-white'>confirm</button>");
+        //     }, function () {
+        //         $(this).find("button:last").remove();
+        //     });
+
+        // });
+        $(document).ready(function () {
+            $('.back').click(function (e) {
+                e.preventDefault();
+                $(".dateandtime").show();
+
+            });
+        });
+        $(document).on('click', '#other', function (e) {
+            e.preventDefault();
+            $(".back").removeClass('d-none');
+            $(".dateandtime").hide();
+            $('.wreaper').append("<div class='row mt-5 w-100'>\
+            <div class='col-md-10 m-auto w-100'>\
+                <div class='card'style='background-color: #fff; border: none;  box-shadow: 0px 0px 6px 1px #CFCECE; padding: 30px 30px;'>\
+                        <h5 class='mb-4'>Enter Details</h5>\
+                        <form action=''>\
+                            <div class='row'>\
+                                <div class='col-md-12'>\
+                                    <div class='mb-4'>\
+                                        <div class='input-group flex-nowrap '>\
+                                            <span class='input-group-text' style='padding: 0.9rem;' id='addon-wrapping'>\
+                                                <img style='width: 21px;'src='frontend/Icon_Images/Root_icons/user (2).png' alt='' sizes='' srcset=''></span>\
+                                            <input type='text' class='form-control' placeholder='Your Name*' />\
+                                        </div>\
+                                    </div>\
+                                </div>\
+                                <div class='col-md-12'>\
+                                    <div class='mb-4'>\
+                                        <div class='input-group flex-nowrap '>\
+                                            <span class='input-group-text' style='padding: 0.8rem;'id='addon-wrapping'>\
+                                                <img style='width: 23px;'src='frontend/Icon_Images/Root_icons/mail.png'alt='' srcset=''>\
+                                            </span>\
+                                            <input type='text' class='form-control' placeholder='Your Mail*' />\
+                                        </div>\
+                                    </div>\
+                                </div>\
+                                <div class='col-md-12'>\
+                                    <div class='mb-4'>\
+                                        <div class='input-group flex-nowrap '>\
+                                            <span class='input-group-text' id='addon-wrapping'>\
+                                                <img src='frontend/Icon_Images/Root_icons/attach-file.png'alt='' srcset=''>\
+                                            </span>\
+                                            <input type='text' class='form-control' placeholder='Website / App Link' />\
+                                        </div>\
+                                    </div>\
+                                </div>\
+                                <div class='col-md-12'>\
+                                    <div class='mb-4'>\
+                                        <div class='input-group flex-nowrap '>\
+                                            <span class='input-group-text' id='addon-wrapping'>\
+                                                <img src='frontend/Icon_Images/Root_icons/send.png'alt='' srcset=''>\
+                                            </span>\
+                                            <textarea class='form-control' rows='4'  placeholder='Your Message' required></textarea>\
+                                        </div>\
+                                    </div>\
+                                    <div class='col-md-12'>\
+                                        <div class='mb-4 d-flex justify-content-between align-items-center'>\
+                                            <button style='background-color: #000040; padding: 8px 35px; font-size: 18px; font-weight: 400;' class='btn text-white' type='submit'>SEND</button>\
+                                            <div class='file file--upload'>\
+                                                <label for='input-file'>\
+                                                    <i class='fas fa-cloud-upload-alt'>\
+                                                    </i>\Upload</label>\
+                                                <input id='input-file' type='file' />\
+                                            </div>\
+                                        </div>\
+                                    </div>\
+                                </div>\
+                            </div>\
+                        </form>\
+                    </div>\
+                </div>\
+            </div>");
+
+        });
+
+
+
+
     </script>
+
 </body>
 
 </html>

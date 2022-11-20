@@ -1,14 +1,59 @@
-@media (max-width: 1199px) {
-    .touch {
-        text-align: center;
+@media (min-width: 1920px) {
+    .rotate_width {
+        width: 1199px;
+        margin: 0 auto;
     }
+
+    .main {
+        margin-left: -90px;
+    }
+
+    .main2 {
+        margin-right: -90px;
+    }
+}
+
+@media (max-width: 1199px) {
+
 
     .touch img {
         margin: auto;
     }
+
+    .meet_ledeership .leadership_image img {
+        width: 180px;
+        object-fit: inherit;
+        height: auto !important;
+
+    }
+
+    .leadership_card .right .card-body {
+        /* right: 220px; */
+        /* left: -88px; */
+        right: 150px;
+    }
+
+    div.book_meeting img {
+        width: 15rem;
+        margin-left: 0;
+    }
+
 }
 
 @media (min-width: 992px) {
+
+    .navbar-toggler {
+        display: none;
+    }
+
+    /* .navbar-toggler2 {
+        display: none;
+    } */
+
+
+    .dropdown-menu li .dropdown-item {
+        padding: 13px;
+    }
 
     #demo-timegrid {
         height: 90%;
@@ -44,8 +89,10 @@
 
 
     .navbar-expand-lg .navbar-nav .dropdown-menu {
-        top: 2.2rem;
+        top: 3rem;
     }
+
+
 
     /* .navbar-nav .dropdown-menu hr {
         display: none;
@@ -90,13 +137,26 @@
     } */
 
     .casestudy .slick-initialized .slick-slide {
-        margin-left: 25px;
-        margin-right: 25px;
+        margin-left: 35px;
+        margin-right: 35px;
+        width: 270px;
     }
 
 }
 
 @media (max-width: 991px) {
+    .rotate_width {
+        grid-template-columns: auto;
+    }
+
+    .content_img {
+        grid-row: 1 / 2;
+    }
+
+    .slider_content {
+        height: auto;
+    }
+
     .navbar-nav .dropdown-menu {
         margin: 0;
         display: block;
@@ -107,7 +167,12 @@
     }
 
     .navbar .navbar-brand, .navbar .navbar-toggler {
-        margin-bottom: 9px;
+        margin-bottom: -9px;
+        border: none;
+        padding: o;
+        margin: 0;
+        padding: 0;
+
     }
 
     .navbar-nav .dropdown-item:focus, .navbar-nav .dropdown-item:hover {
@@ -116,9 +181,47 @@
 
     .navbar-nav .dropdown-menu .dropdown-item {
         font-size: 1.2rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
     }
 
+    .dropdown-menu li:hover::before {
+        content: "";
+        position: absolute;
+        left: 0px;
+        width: 0px;
+        height: px;
+        background: red;
+        overflow: hidden;
+        /* top: 54px; */
+    }
 
+    .navbar-nav .nav-item:hover .nav-link, .navbar-nav .show>.nav-link {
+        /* color: #6d6db9; */
+        /* color: #FD6385; */
+        margin-top: 0px;
+    }
+
+    .navbar-nav .contact {
+        background: #00004000;
+        border-radius: 0px;
+        padding: 0;
+        color: #000040 !important;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .navbar-nav .nav-item .contact .icon {
+        display: none;
+    }
+
+    .navbar-nav .nav-item hr {
+        display: none;
+    }
+
+    .navbar .nav-link .word_arrow {
+        display: none;
+    }
 
     .navbar-nav .dropdown-menu .collapse {
         padding-bottom: 20px;
@@ -130,6 +233,7 @@
 
     .navbar .nav-link {
         font-size: 1.2rem;
+        padding: 0px;
     }
 
     .navbar .nav-link.active::after {
@@ -154,9 +258,15 @@
     .bg-video-wrap {
         position: relative;
         overflow: hidden;
+        margin-top: 45px;
         /* max-height: 100%;
         max-width: 100%; */
         /* background: url(https://designsupply-web.com/samplecontent/vender/codepen/20181014.png) no-repeat center center/cover; */
+    }
+
+    .bg-video-wrap .slidcont {
+
+        height: 50%;
     }
 
     .contant {
@@ -167,8 +277,11 @@
         margin: auto;
     }
 
-    .slick-next {
-        right: 0px;
+
+
+    .slick-prev, .slick-next {
+        width: 25px;
+        height: 25px;
     }
 
     .mline {
@@ -177,11 +290,11 @@
     }
 
     .navbar-collapse {
+        margin-top: -2px;
         background-color: #fff;
         border-bottom-right-radius: 10px;
         border-bottom-left-radius: 10px;
-        padding-bottom: 10px;
-        box-shadow: 0px 2px 4px black;
+        box-shadow: 0px 2px 17px #00000040;
     }
 
     /* .nav-item{
@@ -195,13 +308,12 @@
     } */
 
     .navbar-nav {
-        padding-right: 25px;
-        padding-left: 25px;
+        padding: 25px;
     }
 
     .navbar-toggler-icon {
-        width: 1em;
-        height: 1.7em;
+        width: 4em;
+        height: 3em;
 
     }
 
@@ -209,10 +321,7 @@
         display: none;
     }
 
-    .slick-prev {
-        left: 0px;
-        z-index: +9;
-    }
+
 
     .mission .mission_content.card {
         width: 80%;
@@ -221,6 +330,7 @@
         height: 100%;
     }
 
+    /* career */
 
 
     .leadership_card .card-body {
@@ -236,7 +346,114 @@
     }
 
 
+    .job-list-item {
+        flex-direction: column;
+        align-items: stretch;
+        /* pointer-events: none; */
+    }
 
+    .job-list-item .middle {
+        border-left: none;
+        line-height: 10px;
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .job-list-item .right button {
+        margin-top: 10px;
+    }
+
+    .job-list-item .left p {
+        margin-bottom: 20px;
+    }
+
+    /* career */
+    .word_card {
+        padding-bottom: 30px;
+    }
+
+    .word_card .card {
+        width: 80%;
+        margin-left: unset;
+        margin: 0 auto;
+    }
+
+
+
+
+    .word_card .card.right {
+        width: 80%;
+        margin-left: unset;
+        margin: 0 auto;
+    }
+
+
+
+    .work .card a {
+        position: relative;
+        left: 40%;
+        bottom: -80px;
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+        width: 25%;
+        /* 
+        height: 33px; */
+        font-family: 'Segoe UI Local', 'Segoe UI Web (West European)';
+        ;
+        /* display: flex;
+        align-items: center;
+        justify-content: center; */
+
+    }
+
+    .work .card.right a {
+        position: relative;
+        left: 50%;
+        bottom: -80px;
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+        /* width: 100px;
+        height: 33px; */
+        font-family: 'Segoe UI Local', 'Segoe UI Web (West European)';
+        ;
+        /* display: flex;
+        align-items: center;
+        justify-content: center; */
+
+
+    }
+
+    .work .card a:hover {
+        left: 42%;
+        color: rgb(241, 53, 53);
+    }
+
+    .work .card.right a:hover {
+        left: 42%;
+        color: rgb(241, 53, 53);
+    }
+
+    .work .card.right a::before {
+
+        display: none;
+
+    }
+
+    .work .card.right a::after {
+        font-family: "Font Awesome 5 Free";
+        content: "\f061";
+        display: inline-block;
+        padding-right: 3px;
+        vertical-align: middle;
+        font-weight: 900;
+
+    }
+
+    .meet_ledeership .leadership_image img {
+        width: 180px;
+        object-fit: inherit;
+        height: auto !important;
+    }
 
 }
 
@@ -247,12 +464,55 @@
     .mbsc-timegrid-row {
         display: grid;
     }
+
+    .grid-casestudy .left_image {
+        grid-row: 1/-1;
+
+    }
 }
 
 @media screen and (max-width: 768px) {
-    /* .navbar .navbar-brand, .navbar .navbar-toggler {
-        margin-bottom: 15px;
-    } */
+    /* index slider  */
+
+    .round .wrapper .item.active img {
+        width: 150px;
+        height: 150px;
+        margin-left: 30px;
+    }
+
+    .round2 .wrapper2 .item2.active img {
+        width: 150px;
+        height: 150px;
+        margin-right: 30px;
+    }
+
+    .round2 .wrapper2 .item2 p {
+        top: 200px;
+        margin-right: 200px;
+    }
+
+    .round .wrapper .item p {
+        top: 200px;
+        margin-right: 200px;
+    }
+
+    .bg-video-wrap .slidcont h2, .hire_team h2, .contact_us h2 {
+        font-size: 1.8rem;
+        letter-spacing: 3px;
+        line-height: 3rem;
+    }
+
+    .bg-video-wrap .slidcont h5, .hire_team h5 {
+        font-size: 1.2rem;
+        margin-top: 10px;
+        letter-spacing: 1px;
+
+    }
+
+    /* index slider  */
+    .navbar .navbar-brand, .navbar .navbar-toggler {
+        margin-bottom: 10px;
+    }
 
     #demo-timegrid {
         height: 90%;
@@ -265,7 +525,7 @@
     }
 
     div.book_meeting img {
-        margin-top: 15px;
+        margin-top: 30px;
     }
 
     section.client_think {
@@ -284,14 +544,30 @@
 
     div.client_video {
         width: 70%;
-        height: 22rem;
     }
 
     div.client_image {
-        height: 80px;
-        width: 80px;
-        margin-left: -40px;
+        height: 60px;
+        width: 60px;
+        margin-left: 0;
+        z-index: 10;
+        position: inherit;
+        right: 0;
+        bottom: 0;
+        margin: 0 auto;
+        margin-top: -23px;
+
     }
+
+    .client_info {
+        margin-top: 20px;
+    }
+
+    /* div.client_image {
+
+        position: inherit;
+
+    } */
 
     .csaction {
         display: block;
@@ -305,9 +581,36 @@
         width: 100%;
     }
 
+    .grid-casestudy {
+        grid-template-columns: repeat(1, 1fr);
 
+    }
 
+    .grid-casestudy .right_image {
+        grid-row: 1/-1;
 
+    }
+
+    .grid-casestudy .cs_content {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .meet_ledeership .position_end {
+        margin-top: 30px;
+    }
+
+    .job-list-item:hover {
+        border-left: 0px solid #FA2654;
+    }
+
+    .job-list-item .right button:hover {
+        background-color: #FA2654;
+    }
+
+    .job-list-item:hover .middle {
+        border-left: 2px solid #FA2654;
+    }
 }
 
 @media (max-width: 576px) {
@@ -316,8 +619,35 @@
         /* display: none; */
     }
 
+    p, ul li {
+        font-size: 1.1rem !important;
+    }
+
+    .root {
+        font-size: 1.1rem;
+    }
+
+    .devs {
+        font-size: 1.1rem;
+    }
+
+    .bgclor {
+
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .navbar-toggler-icon {
+        width: 5em;
+        height: 5em;
+    }
+
     .navbar {
-        height: 45px !important;
+        height: 50px !important;
+    }
+
+    .navbar-brand img {
+        width: 145px !important;
     }
 
     /* .navbar .navbar-brand, .navbar .navbar-toggler {
@@ -394,6 +724,27 @@
 
     }
 
+    footer .wrapper {
+        margin-bottom: 20px;
+    }
+
+    footer .wrapper div {
+        margin-bottom: 1rem !important;
+    }
+
+    .book_meeting_banner {
+        height: 200px;
+    }
+
+    div.book_meeting {
+        height: 200px;
+    }
+
+    div.book_meeting span {
+        font-size: 1.1rem;
+
+    }
+
     .csaction {
         display: block;
     }
@@ -408,12 +759,25 @@
         height: 40%;
     }
 
+    .contact .toggle_button .nav-item .nav-link.left {
+
+        width: 12rem !important;
+        padding-right: 10px;
+        padding-left: 10px;
+        font-size: 1.1rem;
+    }
+
+    .contact .toggle_button .nav-item .nav-link.right {
+
+        width: 12rem !important;
+        padding-right: 10px;
+        padding-left: 10px;
+        font-size: 1.1rem;
+    }
 
     /*  */
 
-    .hidecontent {
-        height: 600px;
-    }
+
 
     .mbsc-calendar-controls {
         font-size: 3em !important;
@@ -433,16 +797,20 @@
         /* height: 350px; */
     }
 
-    .mbsc-timegrid-row {
-        font-size: 3rem;
-    }
 
-    .mbsc-datepicker-tab-wrapper .mbsc-datepicker-tab {
+
+    /* .mbsc-datepicker-tab-wrapper .mbsc-datepicker-tab {
         height: auto;
+    } */
+    .mbsc-ios.mbsc-timegrid-item.mbsc-selected, .mbsc-ios.mbsc-timegrid-item:focus, .mbsc-ios.mbsc-timegrid-item:hover {
+        font-size: .600em;
+
     }
 
     .meet_ledeership .leadership_image img {
-        height: auto;
+        width: 160px;
+        object-fit: inherit;
+        height: auto !important;
     }
 
     .casestudy .slider_text {
@@ -450,5 +818,135 @@
         margin: auto;
     }
 
+    .grid-casestudy .cs_content {
+        width: 90%;
+        margin: 0 auto;
+    }
+
     /*  */
+    .job-list-item .left span {
+        font-size: 11px;
+    }
+
+    .job-list-card {
+        margin-top: 0px;
+    }
+
+    .career .bg-image {
+        height: 50vh;
+    }
+
+    .bg-image-wrap {
+
+        height: 35vh;
+    }
+
+    /* grid */
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    .grid-item1 {
+        grid-row: 1/1;
+    }
+
+    .grid-item3 {
+        grid-row: 2/3;
+        grid-column: 1/4;
+    }
+
+    .grid-item4 {
+        grid-row: 3/4;
+        grid-column: 1/4;
+    }
+
+    .grid-casestudy .left_image {
+        grid-row: 1/-1;
+
+    }
+
+    .mission_wrreaper img {
+        height: auto;
+    }
+
+    /* grid */
+
+    /* counter */
+    .counters_1 {
+        background-color: rgb(0 0 64 / 60%);
+        padding-top: 20px !important;
+        padding-bottom: 20px !important;
+    }
+
+    .counterbgimg {
+
+        background-size: 100% 100%;
+    }
+
+    .counterbgimg {
+
+        background-size: 100% auto;
+    }
+
+    div#counters_1\  {
+        padding-top: 0px !important;
+        padding-bottom: 0px !important;
+    }
+
+    .slick-prev {
+        left: 0px;
+
+    }
+
+    .slick-next {
+        right: 0px;
+
+    }
+
+
+    .work .card a {
+        width: 40%;
+        /* margin-bottom: 20px; */
+        left: 30%;
+        top: 70px;
+    }
+
+    .work .card.right a {
+        left: 40%;
+        top: 70px;
+    }
+
+    .hire_team h2 br {
+        display: none;
+    }
+
+    .xdsoft_datetimepicker .xdsoft_datepicker.active, .xdsoft_datetimepicker .xdsoft_timepicker.active {
+        width: 100%;
+    }
+
+    .xdsoft_datetimepicker .xdsoft_datepicker.active+.xdsoft_timepicker {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .xdsoft_datetimepicker .xdsoft_calendar table {
+        height: auto;
+    }
+
+    .xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box {
+        height: 255px;
+        overflow: hidden;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box>div>div {
+        margin-bottom: 10px;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .xdsoft_time_variant {
+        margin-top: 1000px;
+    }
 }

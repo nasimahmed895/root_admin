@@ -2,3 +2,32 @@
 #000040
 #F7FAFD
 #FC9CB1
+
+
+    font-family: candara;
+
+    font-family: mmrtext;
+
+    font-family: mmrtextb;
+
+    font-family: leelawui;
+
+.ff-leelawui {
+    font-family: leelawui;
+}
+
+.ff-candara {
+    font-family: candara;
+}
+.ff-mmrtext {
+    font-family: mmrtext;
+}
+
+.ff-mmrtextb {
+    font-family: mmrtextb;
+}
+.ff-Helvetica {
+    font-family: Helvetica;
+}
+
+ font-family: 'Roboto', sans-serif;

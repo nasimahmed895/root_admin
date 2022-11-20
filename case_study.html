@@ -12,23 +12,33 @@
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="frontend/plugin/slick/slick.css">
     <link rel="stylesheet" href="frontend/plugin/slick/slick-theme.css">
+    <link rel="stylesheet" href="frontend/font/stylesheet.css">
     <link rel="stylesheet" href="frontend/style/style.css">
     <link rel="stylesheet" href="frontend/style/custom.css">
     <link rel="stylesheet" href="frontend/style/mediaquery.css">
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg "
-        style=" height: 65px; position: fixed; width: 100%;box-shadow: 0px -11px 12px 7px #000000;">
+    <nav class="navbar navbar-expand-lg  sticky-top"
+        style="  position: fixed; width: 100%;box-shadow: 0px -11px 12px 7px #000000;">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html"><img width="128px" src="frontend/Icon_Images/logo.png" alt="logo"
+            <a class="navbar-brand" href="index.html"><img width="180px" src="frontend/Icon_Images/logo.png" alt="logo"
                     srcset=""></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler  " id="navbar-toggler" onclick="myFunction()" type="button"
+                data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"
+                    style="  background-image: url(frontend/Icon_Images/menu.png);"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <button class="navbar-toggler toggler_button" id="navbar-toggler2" onclick="myFunction()" type="button"
+                data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"
+                    style="  background-image: url(frontend/Icon_Images/Menu/Cut.png);"></span>
+            </button>
+
+
+            <div class="collapse navbar-collapse " id="navbarSupportedContent">
                 <ul class="navbar-nav text-center  mb-lg-0 d-flex ">
                     <li class="nav-item">
                         <a class="nav-link " aria-current="page" href="index.html">HOME</a>
@@ -43,9 +53,8 @@
                     </li>
                     <hr class="">
                     <li class="nav-item dropdown p-0">
-                        <a class="nav-link dropdown-toggle   " href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            HOW WE WORK
+                        <a class="nav-link " href="how_we_work.html" role="button">
+                            HOW WE WORK <i class="fas fa-chevron-down word_arrow"></i>
                         </a>
                         <hr class="">
                         <ul class="dropdown-menu ">
@@ -56,181 +65,157 @@
                             <hr class="d">
                         </ul>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact_us.html"><img width="100px"
-                                src="frontend/Icon_Images/cant.png" alt="" srcset=""></a>
+                    <li class="nav-item d-flex justify-content-center align-items-center " style="margin-left: 12px;">
+                        <a class="nav-link contact" href="contact_us.html">CONTACT <div class="icon"></div></a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
+
     <div class="extra" style="padding-top: 45px;"></div>
 
-    <div class="container casestudy text-white p-0">
-        <div class="slider   text-center"
-            style="background-image:url(frontend/Icon_Images/case\ study.jpg);  background-position: center; ">
-            <div class="bgclor pt-2 pb-2">
-                <div class="slider_text">
-                    <h5 class="mb-3 pt-lg-5">HERE IS OUR FAVOURITE WORKS</h5>
-                    <p class="pb-lg-5 f400">
+    <div class="casestudy">
+        <div class="slider  text-center position-relative"
+            style="background-image:url(frontend/Icon_Images/case\ study.jpg);background-position: 50% 84%; height: 325px;">
+            <div class="bgclor ">
+                <div class="slider_text container">
+                    <h3 class="mb-3">HERE IS OUR FAVOURITE WORKS</h3>
+                    <p class="f100 ff-Roboto text-center">
                         We have worked with amazing clients over the years. Take a look at our process and how we've
                         been
                         able to help businesses transform their ideas to scalable products.</p>
                 </div>
             </div>
         </div>
-        <div class="cs_card p-5 left border-5">
-            <div class="left_img">
-                <div class="row flax">
-                    <div class="  col-lg-6 ">
-                        <div class="img_wreaper mission_wrreaper">
-                            <img src="frontend/Icon_Images/Case Study/cs1.png" alt="" srcset="" class="img_responsive">
-                        </div>
-                    </div>
-                    <div class="col-md-6 ">
-                        <div class="cs_content ">
-                            <div class="shadow-black text-black b-r-10 p-4 ">
-                                <h6 class="f700 mb-3">Furniture Ecommerce</h6>
-                                <p>There are tons of social networking platforms out there. When one of our clients
-                                    proposed to make a brand new social media platform, We accepted that as a new
-                                    challenge and decided to create something cleaner and time-efficient.</p>
-                                <div class="text-center text-md-start">
-                                    <div class="iconimg">
-                                        <img src="frontend/Icon_Images/Technology icons/flutter.svg" alt="flutter"
-                                            srcset="" class="m-2 mt-0">
-                                        <img src="frontend/Icon_Images/Technology icons/laravel.svg" alt="laravel"
-                                            srcset="" class="m-2 mt-0">
-                                        <img src="frontend/Icon_Images/Technology icons/mysql.svg" alt="mysql" srcset=""
-                                            class="m-2 mt-0">
+    </div>
+
+    <div class="casestudy text-white p-0">
+        <div class="cs_card p-5 right   border-5">
+            <div class="container">
+                <div class="content">
+                    <div class="grid-casestudy">
+                        <div class=" d-flex justify-content-center align-items-center ">
+                            <div class="cs_content ">
+                                <div class="shadow-black text-black b-r-10 p-4">
+                                    <h6 class="f700 mb-3">Furniture Ecommerce</h6>
+                                    <p>There are tons of social networking platforms out there. When one of our clients
+                                        proposed to make a brand new social media platform, We accepted that as a new
+                                        challenge and decided to create something cleaner and time-efficient.</p>
+                                    <div class="text-center text-md-start">
+                                        <div class="iconimg">
+                                            <img src="frontend/Icon_Images/Technology icons/flutter.svg" alt="flutter"
+                                                srcset="" class="m-2 mt-0">
+                                            <img src="frontend/Icon_Images/Technology icons/laravel.svg" alt="laravel"
+                                                srcset="" class="m-2 mt-0">
+                                            <img src="frontend/Icon_Images/Technology icons/mysql.svg" alt="mysql"
+                                                srcset="" class="m-2 mt-0">
+                                        </div>
+                                        <a href="case_study01.html" class="btn  text-white  f400 b-r-20 mt-4">
+                                            Continue Case
+                                            Study</a>
                                     </div>
-                                    <a href="case_study01.html"
-                                        class="btn bg-primary text-white f12px f100 b-r-20 mt-4"> Continue Case
-                                        Study</a>
                                 </div>
+
                             </div>
-
                         </div>
-                    </div>
-
-                </div>
-
-            </div>
-        </div>
-        <div class="cs_card p-5 right card_bg  border-5">
-            <div class="left_img">
-                <div class="row flax">
-                    <div class="col-lg-6 ">
-                        <div class="cs_content ">
-                            <div class="shadow-black text-black b-r-10 p-4">
-                                <h6 class="f700 mb-3">Furniture Ecommerce</h6>
-                                <p>There are tons of social networking platforms out there. When one of our clients
-                                    proposed to make a brand new social media platform, We accepted that as a new
-                                    challenge and decided to create something cleaner and time-efficient.</p>
-                                <div class="text-center text-md-start">
-                                    <div class="iconimg">
-                                        <img src="frontend/Icon_Images/Technology icons/flutter.svg" alt="flutter"
-                                            srcset="" class="m-2 mt-0">
-                                        <img src="frontend/Icon_Images/Technology icons/laravel.svg" alt="laravel"
-                                            srcset="" class="m-2 mt-0">
-                                        <img src="frontend/Icon_Images/Technology icons/mysql.svg" alt="mysql" srcset=""
-                                            class="m-2 mt-0">
-                                    </div>
-                                    <a href="case_study01.html"
-                                        class="btn bg-primary text-white f12px f100 b-r-20 mt-4"> Continue Case
-                                        Study</a>
-                                </div>
+                        <div class="left_image">
+                            <div class="img_wreaper mission_wrreaper">
+                                <img src="frontend/Icon_Images/Case Study/cs1.png" alt="" srcset=""
+                                    class="img_responsive">
                             </div>
-
                         </div>
                     </div>
-                    <div class="  col-md-6 ">
-                        <div class="img_wreaper mission_wrreaper">
-                            <img src="frontend/Icon_Images/Case Study/cs2.png" alt="" srcset="" class="img_responsive">
-                        </div>
-                    </div>
-
-
                 </div>
-
             </div>
-        </div>
-        <div class="cs_card p-5 left border-5">
-            <div class="left_img">
-                <div class="row flax">
-                    <div class="  col-lg-6 ">
-                        <div class="img_wreaper mission_wrreaper">
-                            <img src="frontend/Icon_Images/Case Study/cs3.png" alt="" srcset="" class="img_responsive">
-                        </div>
-                    </div>
-                    <div class="col-md-6 ">
-                        <div class="cs_content ">
-                            <div class="shadow-black text-black b-r-10 p-4 ">
-                                <h6 class="f700 mb-3">Furniture Ecommerce</h6>
-                                <p>There are tons of social networking platforms out there. When one of our clients
-                                    proposed to make a brand new social media platform, We accepted that as a new
-                                    challenge and decided to create something cleaner and time-efficient.</p>
-                                <div class="text-center text-md-start">
-                                    <div class="iconimg">
-                                        <img src="frontend/Icon_Images/Technology icons/flutter.svg" alt="flutter"
-                                            srcset="" class="m-2 mt-0">
-                                        <img src="frontend/Icon_Images/Technology icons/laravel.svg" alt="laravel"
-                                            srcset="" class="m-2 mt-0">
-                                        <img src="frontend/Icon_Images/Technology icons/mysql.svg" alt="mysql" srcset=""
-                                            class="m-2 mt-0">
-                                    </div>
-                                    <a href="case_study01.html"
-                                        class="btn bg-primary text-white f12px f100 b-r-20 mt-4"> Continue Case
-                                        Study</a>
-                                </div>
-                            </div>
 
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-        </div>
-        <div class="cs_card p-5 right card_bg  border-5">
-            <div class="left_img">
-                <div class="row flax">
-                    <div class="col-lg-6 ">
-                        <div class="cs_content ">
-                            <div class="shadow-black text-black b-r-10 p-4">
-                                <h6 class="f700 mb-3">Furniture Ecommerce</h6>
-                                <p>There are tons of social networking platforms out there. When one of our clients
-                                    proposed to make a brand new social media platform, We accepted that as a new
-                                    challenge and decided to create something cleaner and time-efficient.</p>
-                                <div class="text-center text-md-start">
-                                    <div class="iconimg">
-                                        <img src="frontend/Icon_Images/Technology icons/flutter.svg" alt="flutter"
-                                            srcset="" class="m-2 mt-0">
-                                        <img src="frontend/Icon_Images/Technology icons/laravel.svg" alt="laravel"
-                                            srcset="" class="m-2 mt-0">
-                                        <img src="frontend/Icon_Images/Technology icons/mysql.svg" alt="mysql" srcset=""
-                                            class="m-2 mt-0">
-                                    </div>
-                                    <a href="case_study01.html"
-                                        class="btn bg-primary text-white f12px f100 b-r-20 mt-4"> Continue Case
-                                        Study</a>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="  col-md-6 ">
-                        <div class="img_wreaper mission_wrreaper">
-                            <img src="frontend/Icon_Images/Case Study/cs4.png" alt="" srcset="" class="img_responsive">
-                        </div>
-                    </div>
-
-
-                </div>
-
-            </div>
         </div>
     </div>
+    <div class="casestudy text-white p-0">
+        <div class="cs_card p-5 right card_bg  border-5">
+            <div class="container">
+                <div class="content">
+                    <div class="grid-casestudy">
+                        <div class=" d-flex justify-content-center align-items-center ">
+                            <div class="cs_content ">
+                                <div class="shadow-black text-black b-r-10 p-4">
+                                    <h6 class="f700 mb-3">Furniture Ecommerce</h6>
+                                    <p>There are tons of social networking platforms out there. When one of our clients
+                                        proposed to make a brand new social media platform, We accepted that as a new
+                                        challenge and decided to create something cleaner and time-efficient.</p>
+                                    <div class="text-center text-md-start">
+                                        <div class="iconimg">
+                                            <img src="frontend/Icon_Images/Technology icons/flutter.svg" alt="flutter"
+                                                srcset="" class="m-2 mt-0">
+                                            <img src="frontend/Icon_Images/Technology icons/laravel.svg" alt="laravel"
+                                                srcset="" class="m-2 mt-0">
+                                            <img src="frontend/Icon_Images/Technology icons/mysql.svg" alt="mysql"
+                                                srcset="" class="m-2 mt-0">
+                                        </div>
+                                        <a href="case_study01.html" class="btn  text-white  f400 b-r-20 mt-4">
+                                            Continue Case
+                                            Study</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="right_image">
+                            <div class="img_wreaper mission_wrreaper">
+                                <img src="frontend/Icon_Images/Case Study/cs2.png" alt="" srcset=""
+                                    class="img_responsive">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="casestudy text-white p-0">
+        <div class="cs_card p-5 right   border-5">
+            <div class="container">
+                <div class="content">
+                    <div class="grid-casestudy">
+                        <div class=" d-flex justify-content-center align-items-center ">
+                            <div class="cs_content ">
+                                <div class="shadow-black text-black b-r-10 p-4">
+                                    <h6 class="f700 mb-3">Furniture Ecommerce</h6>
+                                    <p>There are tons of social networking platforms out there. When one of our clients
+                                        proposed to make a brand new social media platform, We accepted that as a new
+                                        challenge and decided to create something cleaner and time-efficient.</p>
+                                    <div class="text-center text-md-start">
+                                        <div class="iconimg">
+                                            <img src="frontend/Icon_Images/Technology icons/flutter.svg" alt="flutter"
+                                                srcset="" class="m-2 mt-0">
+                                            <img src="frontend/Icon_Images/Technology icons/laravel.svg" alt="laravel"
+                                                srcset="" class="m-2 mt-0">
+                                            <img src="frontend/Icon_Images/Technology icons/mysql.svg" alt="mysql"
+                                                srcset="" class="m-2 mt-0">
+                                        </div>
+                                        <a href="case_study01.html" class="btn text-white  f400 b-r-20 mt-4">
+                                            Continue Case
+                                            Study</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="left_image">
+                            <div class="img_wreaper mission_wrreaper">
+                                <img src="frontend/Icon_Images/Case Study/cs4.png" alt="" srcset=""
+                                    class="img_responsive">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
 
     <footer>
         <div class="">
@@ -239,7 +224,10 @@
                 <div class="bg-color ">
                     <div class="book_meeting">
                         <span>Book a Meeting With Us, and Let's Discuss</span>
-                        <img src="frontend/Icon_Images/Contact.png" alt="">
+                        <a href="contact_us.html">
+                            <img src="frontend/Icon_Images/Contact.png" alt="">
+                        </a>
+
                     </div>
                 </div>
             </section>
@@ -247,9 +235,9 @@
         <div class="contant ">
 
             <div class="container">
-                <div class="row p-5 pb-2">
+                <div class="row py-5 pb-2">
 
-                    <div class="col-md-3 wrapper">
+                    <div class="col-md-4 wrapper">
                         <div class="mb-5">
                             <span class="tbold">Get In Touch</span>
                         </div>
@@ -266,13 +254,13 @@
                     <div class="col-md-3 wrapper">
                         <div class="mb-5"><span class="tbold">Quick Links</span></div>
                         <ul class="p-0">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Case Study</a></li>
-                            <li><a href="#">How We Work</a></li>
-                            <li><a href="#">Our Team</a></li>
-                            <li><a href="#">Contact Us</a></li>
-                            <li><a href="#">Career</a></li>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="case_study.html">Case Study</a></li>
+                            <li><a href="how_we_work.html">How We Work</a></li>
+                            <li><a href="ourteam.html">Our Team</a></li>
+                            <li><a href="contact_us.html">Contact Us</a></li>
+                            <li><a href="career.html">Career</a></li>
                         </ul>
                     </div>
                     <div class="col-md-3 wrapper Services">
@@ -281,7 +269,7 @@
                         <p>Web Development</p>
                         <p> Custom Software</p>
                     </div>
-                    <div class="col-md-3 wrapper">
+                    <div class="col-md-2 wrapper">
                         <div class="mb-5"><span class="tbold">Follow Us</sp>
                         </div>
 
@@ -317,6 +305,13 @@
 
             </div>
         </div>
+        <div class="contant" style="padding-top: 50px;">
+            <div class="copyright">
+                <p class="f1rem text-center py-3"><i class="far fa-copyright"></i> Copyright 2022 RootDevs All
+                    Rights
+                    Reserved.</p>
+            </div>
+        </div>
 
     </footer>
 
@@ -326,6 +321,19 @@
     <script type="text/javascript" src="frontend/plugin/multi-animated-counter.js"></script>
     <script src="frontend/plugin/slick/slick.js"></script>
     <script src="frontend/js/script.js"></script>
+    <script>
+        function myFunction() {
+            var toggler = document.getElementById("navbar-toggler");
+            var toggler2 = document.getElementById("navbar-toggler2");
+            if (toggler.style.display === "none") {
+                toggler.style.display = "block";
+                toggler2.style.display = "none";
+            } else {
+                toggler.style.display = "none";
+                toggler2.style.display = "block";
+            }
+        }
+    </script>
 
 </body>
 
